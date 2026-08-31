@@ -6,21 +6,21 @@
     <title>漫道日报 2026-08-30</title>
     
     <!-- SEO 元数据 -->
-    <meta name="description" content="漫道日报 2026年8月30日 - 把一次涨薪变成两次、个人精力三分法、体制内晋升博弈、PMP考证迷思、身体健康管理">
-    <meta name="keywords" content="职场,漫道日报,涨薪策略,职业路径,健康管理,精力管理,PMP">
+    <meta name="description" content="漫道日报 2026年8月30日 - 跳槽薪资翻倍策略、精力三分法、考证与职业迷茫、职场冲突管理、健康管理等精彩内容">
+    <meta name="keywords" content="职场,漫道日报,跳槽涨薪,职业规划,精力管理,PMP,职场冲突,健康管理,AI提效">
     <meta name="author" content="漫道">
     
     <!-- Open Graph / 社交媒体分享标签 -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="漫道日报 2026-08-30">
-    <meta property="og:description" content="把一次涨薪变成两次、个人精力三分法、体制内晋升博弈、PMP考证迷思、身体健康管理">
+    <meta property="og:description" content="跳槽薪资翻倍策略、精力三分法、考证与职业迷茫、职场冲突管理、健康管理等精彩内容">
     <meta property="og:site_name" content="漫道">
     <meta property="og:locale" content="zh_CN">
     
     <!-- Twitter Card 标签 -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="漫道日报 2026-08-30">
-    <meta name="twitter:description" content="把一次涨薪变成两次、个人精力三分法、体制内晋升博弈、PMP考证迷思、身体健康管理">
+    <meta name="twitter:description" content="跳槽薪资翻倍策略、精力三分法、考证与职业迷茫等精彩内容分享">
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6C9T7FPDT2"></script>
@@ -28,20 +28,15 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-6C9T7FPDT2');
     </script>
     
     <!-- 深色模式预加载脚本 - 终极防闪烁方案 -->
     <script>
-        // 在DOM解析前立即执行，最大程度避免闪烁
         (function() {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
-                // 方案1：为html元素添加类
                 document.documentElement.classList.add('dark-mode-preload');
-                
-                // 方案2：直接设置body的内联样式（更早生效）
                 const style = document.createElement('style');
                 style.textContent = `
                     html, body { background-color: #1a1a1a !important; color: #e5e5e5 !important; }
@@ -51,7 +46,6 @@
         })();
     </script>
     
-    <!-- 正常标题格式应为：群聊日报 yyyy-mm-dd，以便外部链接查看时了解日报日期 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
@@ -71,7 +65,7 @@
         .bento-card {
             background-color: #ffffff;
             border: 1px solid #e9e9eb;
-            border-radius: 1rem; /* 16px */
+            border-radius: 1rem;
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
@@ -82,79 +76,63 @@
         }
 
         .number-display {
-            font-weight: 900; /* black */
+            font-weight: 900;
             font-size: 4rem;
             line-height: 1;
-            /* Color will be set by Tailwind, e.g., text-[#4D6BFE] or text-black */
         }
 
         .section-title {
-            font-weight: 800; /* extrabold */
-            font-size: 2.25rem; /* 36px */
+            font-weight: 800;
+            font-size: 2.25rem;
             color: #000000;
-            margin-bottom: 2rem; /* 32px, consistent with Tailwind mb-8 */
-            white-space: nowrap; /* 防止标题换行 */
+            margin-bottom: 2rem;
+            white-space: nowrap;
         }
 
-        /* 手机端响应式调整 */
         @media (max-width: 640px) {
             .section-title {
-                font-size: 1.5rem; /* 24px，手机上使用更小的字体 */
+                font-size: 1.5rem;
                 margin-bottom: 1.5rem;
             }
-            
-            /* 大数字显示在手机上缩小 */
             .number-display {
-                font-size: 3rem; /* 手机上从64px缩小到48px */
+                font-size: 3rem;
             }
-            
-            /* 卡片内边距在手机上缩小，节省空间 */
             .bento-card.p-8 {
-                padding: 1.25rem !important; /* 从32px缩小到20px */
+                padding: 1.25rem !important;
             }
-            
             .bento-card.p-6 {
-                padding: 1rem !important; /* 从24px缩小到16px */
+                padding: 1rem !important;
             }
-            
             .bento-card.p-5 {
-                padding: 0.875rem !important; /* 从20px缩小到14px */
+                padding: 0.875rem !important;
             }
-            
-            /* 主标题在手机上缩小 */
             h1.text-5xl {
-                font-size: 2rem !important; /* 从48px缩小到32px */
+                font-size: 2rem !important;
                 margin-bottom: 1.25rem !important;
             }
-            
-            /* 话题标题在手机上缩小 */
             h4.text-xl {
-                font-size: 1.125rem !important; /* 从20px缩小到18px */
+                font-size: 1.125rem !important;
             }
-            
-            /* 总消息数量文字在手机上缩小 */
             p.text-xl {
-                font-size: 1rem !important; /* 从20px缩小到16px */
+                font-size: 1rem !important;
             }
         }
 
         .tag-item {
-            background-color: rgba(16, 185, 129, 0.10); /* green-500 @ 10% */
-            color: #10b981; /* green-500 */
-            padding: 0.25rem 0.75rem; /* py-1 px-3 */
-            border-radius: 9999px; /* rounded-full */
-            font-size: 0.75rem; /* text-xs */
-            font-weight: 500; /* medium */
+            background-color: rgba(16, 185, 129, 0.10);
+            color: #10b981;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
         }
 
-
-        /* HTML注释: 展开功能相关样式 */
         .expandable-content {
             position: relative;
         }
 
         .content-preview.collapsed {
-            max-height: 11rem; /* 控制预览高度，结合渐变遮罩更紧凑 */
+            max-height: 11rem;
             overflow: hidden;
             position: relative;
         }
@@ -170,7 +148,6 @@
             pointer-events: none;
         }
 
-        /* 收起态样式优化：收紧段间距，弱化多余换行，避免空白过大 */
         .content-preview.collapsed p,
         .content-preview.collapsed ul,
         .content-preview.collapsed ol,
@@ -185,11 +162,9 @@
             margin-bottom: 0.25rem !important;
             line-height: 1.5 !important;
         }
-        /* 多重 <br> 在收起态容易拉大间距，这里统一弱化 */
         .content-preview.collapsed br {
             display: none;
         }
-        /* 允许小标题<b>后的首个换行保留，确保分行 */
         .content-preview.collapsed b + br {
             display: inline;
         }
@@ -214,30 +189,22 @@
             transform: rotate(180deg);
         }
 
-        /* === 绿色主题统一样式 === */
-        /* 绿色主题统一样式 */
-        .text-\[\#4D6BFE\] { color: #10b981 !important; }              /* green-500 */
+        .text-\[\#4D6BFE\] { color: #10b981 !important; }
         .border-\[\#4D6BFE\] { border-color: #10b981 !important; }
-        .border-\[\#93c5fd\] { border-color: #6ee7b7 !important; }    /* green-300 */
+        .border-\[\#93c5fd\] { border-color: #6ee7b7 !important; }
         
-        /* 渐变色统一为绿色 */
         .from-\[\#4D6BFE\]\/20 { --tw-gradient-from: rgb(16 185 129 / 0.20) !important; }
         .via-\[\#4D6BFE\]\/10 { --tw-gradient-stops: var(--tw-gradient-from), rgb(16 185 129 / 0.10), var(--tw-gradient-to) !important; }
         .to-\[\#4D6BFE\]\/5 { --tw-gradient-to: rgb(16 185 129 / 0.05) !important; }
 
-        /* 紫色块（爬楼关键词）替换为绿色 */
-        .bg-purple-50   { background-color: #ecfdf5 !important; }     /* green-50 */
-        .border-purple-200 { border-color: #a7f3d0 !important; }      /* green-200 */
-        .text-purple-700   { color: #047857 !important; }             /* green-700 */
-        .text-purple-600   { color: #059669 !important; }             /* green-600 */
+        .bg-purple-50   { background-color: #ecfdf5 !important; }
+        .border-purple-200 { border-color: #a7f3d0 !important; }
+        .text-purple-700   { color: #047857 !important; }
+        .text-purple-600   { color: #059669 !important; }
         
-        /* 交互与背景色 */
         .hover\:text-blue-700:hover { color: #047857 !important; }
         .bg-blue-50 { background-color: #ecfdf5 !important; }
 
-        /* === 新增功能样式 === */
-        
-        /* 悬浮操作按钮栈 */
         .floating-action-stack {
             position: fixed;
             right: 2rem;
@@ -421,7 +388,6 @@
             box-shadow: inset 2px 0 0 0 rgba(16, 185, 129, 0.6);
         }
         
-        /* 返回顶部按钮样式 */
         .back-to-top {
             width: 3rem;
             height: 3rem;
@@ -449,7 +415,6 @@
             box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
         }
         
-        /* 复制按钮样式 */
         .copy-btn {
             display: inline-flex;
             align-items: center;
@@ -475,8 +440,6 @@
             color: white;
         }
         
-        /* 暗色模式样式 */
-        /* 预加载类：在JavaScript执行前就应用深色模式 */
         html.dark-mode-preload,
         html.dark-mode-preload body,
         body.dark-mode {
@@ -546,12 +509,10 @@
             border-color: #d97706 !important;
         }
         
-        /* 深色模式下的渐变遮罩 */
         body.dark-mode .content-preview.collapsed::after {
             background: linear-gradient(transparent, rgba(26, 26, 26, 0.95));
         }
         
-        /* 深色模式下的加粗文字增强 */
         body.dark-mode b,
         body.dark-mode strong {
             color: #f5f5f5 !important;
@@ -559,7 +520,6 @@
             text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.3);
         }
         
-        /* 深色模式下的链接样式 */
         body.dark-mode a {
             color: #6ee7b7;
         }
@@ -568,13 +528,11 @@
             color: #a7f3d0;
         }
         
-        /* 深色模式下的标签样式 */
         body.dark-mode .tag-item {
             background-color: rgba(16, 185, 129, 0.2);
             color: #6ee7b7;
         }
         
-        /* 深色模式下的按钮文字 */
         body.dark-mode .text-green-600 {
             color: #6ee7b7 !important;
         }
@@ -591,7 +549,6 @@
             color: #4ade80 !important;
         }
         
-        /* 深色模式下的h标签 */
         body.dark-mode h1,
         body.dark-mode h2,
         body.dark-mode h3,
@@ -600,12 +557,10 @@
             color: #f5f5f5 !important;
         }
         
-        /* 深色模式下的边框和分隔线 */
         body.dark-mode .border-l-4 {
             opacity: 0.8;
         }
         
-        /* 深色模式下复制按钮 */
         body.dark-mode .copy-btn {
             border-color: #6ee7b7;
             color: #6ee7b7;
@@ -616,7 +571,6 @@
             color: #1a1a1a;
         }
         
-        /* 主题切换按钮 */
         .theme-toggle {
             width: 3rem;
             height: 3rem;
@@ -636,10 +590,7 @@
             transform: translateY(-3px);
             box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
         }
-        
-        /* === 截图模块样式 === */
 
-        /* HTML注释: 截图快捷按钮样式 */
         .screenshot-btn {
             position: absolute;
             top: 1.5rem;
@@ -728,7 +679,6 @@
             50% { opacity: 0.5; }
         }
 
-        /* 截图时的临时容器样式 */
         .screenshot-wrapper {
             padding: 40px 40px 32px;
             background: linear-gradient(160deg, #ffffff 0%, #f6fef9 40%, #ecfdf5 100%);
@@ -904,7 +854,6 @@
             height: 94px !important;
         }
 
-        /* 截图失败降级：图片浮层（移动端长按保存） */
         .screenshot-fallback-mask {
             position: fixed;
             inset: 0;
@@ -946,47 +895,39 @@
             cursor: pointer;
         }
 
-        /* 打印样式 */
         @media print {
             .floating-action-stack, nav, .copy-btn, .expand-btn, .screenshot-btn, .screenshot-fallback-mask {
                 display: none !important;
             }
-            
             body {
                 background: white;
                 color: black;
             }
-            
             .bento-card {
                 box-shadow: none;
                 border: 1px solid #ddd;
                 page-break-inside: avoid;
             }
-            
             .content-preview.collapsed {
                 max-height: none !important;
             }
-            
             .content-preview.collapsed::after {
                 display: none;
             }
         }
         
-        /* 移动端优化 */
         @media (max-width: 640px) {
             .floating-action-stack {
                 right: 1rem;
                 bottom: 1rem;
                 gap: 0.5rem;
             }
-
             .floating-action-stack .toc-floating-button,
             .floating-action-stack .theme-toggle,
             .floating-action-stack .back-to-top {
                 width: 2.75rem;
                 height: 2.75rem;
             }
-
             .toc-panel {
                 width: calc(100vw - 2rem);
                 max-width: calc(100vw - 2rem);
@@ -995,34 +936,23 @@
             }
         }
 
-        /* 页面淡入效果 - 让切换更平滑 */
         body {
             animation: fadeIn 0.3s ease-in;
         }
         
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-
     </style>
 </head>
 <body class="bg-white text-black min-h-screen">
-    <!-- HTML注释: 整体宽度通过 max-w-4xl 控制，实现日报宽度调小并保持响应式。-->
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
 
-        <!-- === "群聊日报" 文件头区域 开始 === -->
-        <!-- HTML注释: 此模块作为单独一行，占据整行宽度。包含日报主标题、报告日期和时间范围。 -->
         <header class="w-full mb-8" role="banner">
             <div class="bento-card p-8">
                 <div class="text-center">
-                    <h1 class="text-5xl font-black text-black mb-6">
-                        漫道
-                    </h1>
+                    <h1 class="text-5xl font-black text-black mb-6">漫道</h1>
                     <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-lg mb-4">
                         <div class="flex items-center text-gray-700">
                             <i class="fas fa-calendar-alt mr-2 text-[#4D6BFE]"></i>
@@ -1030,17 +960,15 @@
                         </div>
                         <div class="flex items-center text-gray-700">
                             <i class="fas fa-clock mr-2 text-[#4D6BFE]"></i>
-                            <span>17:53 - 23:51</span>
+                            <span>17:53 - 21:56(次日)</span>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
         
-        <!-- 导航与历史入口 -->
         <nav class="w-full mb-8" aria-label="日期导航">
             <div class="bento-card p-5">
-                <!-- 日期导航 -->
                 <div class="flex items-center justify-between mb-4">
                     <button id="prev-day" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg shadow disabled:bg-gray-200 disabled:text-gray-400 transition-all" aria-label="查看前一天日报">
                         <i class="fas fa-chevron-left"></i>
@@ -1055,61 +983,45 @@
                 </div>
             </div>
         </nav>
-        <!-- === "群聊日报" 文件头区域 结束 === -->
 
-        <!-- === 内容目录导航（通过右下角悬浮按钮呈现） === -->
-
-        <!-- === 模块一：总消息概览 开始 === -->
-        <!-- HTML注释: 此模块作为单独一行，占据整行宽度。显示当日群聊总消息数量。 -->
         <section id="section-overview" class="w-full mb-12" aria-labelledby="section-overview-title">
-            <h2 id="section-overview-title" class="section-title">
-                一、今日群聊速览
-            </h2>
+            <h2 id="section-overview-title" class="section-title">一、今日群聊速览</h2>
             <div class="bento-card p-8 bg-gradient-to-br from-[#10b981]/20 via-[#10b981]/10 to-[#10b981]/5 text-center rounded-2xl">
-                <div class="number-display text-[#4D6BFE]">
-                    205
-                </div>
+                <div class="number-display text-[#4D6BFE]">360</div>
                 <p class="text-xl font-semibold text-black mt-3">总消息数量</p>
             </div>
         </section>
-        <!-- === 模块一：总消息概览 结束 === -->
 
-        <!-- === 模块二：火花碰撞时刻・热点话题 开始 === -->
-        <!-- HTML注释: 此模块作为单独一行，占据整行宽度。用于展示群内讨论的热点话题。 -->
         <section id="section-topics" class="w-full mb-12" aria-labelledby="section-topics-title">
-            <h2 id="section-topics-title" class="section-title">
-                二、职通时刻・深度话题
-            </h2>
-            <!-- 列表容器: 讨论话题 -->
+            <h2 id="section-topics-title" class="section-title">二、职通时刻・深度话题</h2>
             <div class="space-y-8">
 
-                <!-- 热点话题卡片 开始 -->
-                <div class="bento-card p-6 rounded-xl"> 
+                <!-- 话题1 开始 -->
+                <div class="bento-card p-6 rounded-xl">
                     <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
                         <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            如何把一次涨薪变成两次：offer博弈与职业路径规划
+                            跳槽薪资翻倍策略：如何把一次涨薪变成两次
                         </h4>
                         <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
                             <i class="fas fa-clock mr-1.5 text-gray-500"></i>
-                            19:05 - 20:40
+                            19:05 - 19:11
                         </span>
                     </div>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            AA昍：“我今天分享一个自己的小收获——是我回答别人问题时才发现的。如何把一次涨薪变成两次。”
+                            AA昍：“我今天分享一个自己的小收获——如何把一次涨薪变成两次。”
                         </p>
                     </div>
 
                     <div class="mb-5">
                         <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
                         <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">跳槽涨薪</span>
+                            <span class="tag-item">offer谈判</span>
+                            <span class="tag-item">职业规划</span>
                             <span class="tag-item">涨薪策略</span>
-                            <span class="tag-item">跳槽谈判</span>
-                            <span class="tag-item">offer博弈</span>
-                            <span class="tag-item">职业生涯</span>
-                            <span class="tag-item">风口行业</span>
                         </div>
                     </div>
 
@@ -1118,7 +1030,7 @@
                         <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、话题背景与起因</b><br>AA昍在群内分享“如何把一次涨薪变成两次”的实操方法，起因是两个群友都遇到了类似场景：在A司，已经拿到B司+20%的offer，但因为一年普涨15%，单纯跳槽显得有点亏。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>操作路径</b>：先拿着B司+20%的offer，找老东家A司直接谈涨薪，争取+15%；然后再以+15%后的待遇去新一轮面试（包括与B司实时沟通），争取在+15%基础上再+20%。若拿到“+15%+20%”的机会，一次涨薪变两次，跳；若拿不到，至少不浪费一年普涨。<br>2. <b>前提条件</b>：重点是“先拿到offer”。不要等想跳了再面，而是至少每半年（最好每3个月）更新简历。不主动动起来，肯定没有机会。<br>3. <b>个人案例</b>：AA昍入职起薪10k，第一年普涨20%到12k；同事教了他这个办法后，同事先跳走并拉他过去，直接再+20%到15k，等于第一年实际涨薪50%。他分享自己4年多从年包10w到100w，靠的就是这种小步快跑的主动出击，当然也离不开风口行业。<br>4. <b>职业路径图</b>：以自身为例复盘，在互联网曾规划“P6→专家/管理→总监”的路径，后来因为同学拉去创业而改变方向。核心是把大目标拆小拆细，一直拆到“我今年做什么”，甚至细到季度，边实践边纠错。<br>5. <b>升维思考</b>：拿公司管理你的KPI方式，来管理你自己，你就学会了工作，也就拥有了创造职业价值的思维。<br><br><b>三、结论与启发</b><br>跳槽遇到涨幅尴尬时，可以用外部offer作为内部涨薪谈判的筹码，把一次涨薪变成两次。同时要保持市场敏感度，定期更新简历，把职业目标拆解成当下的具体动作，像KPI一样管理自己。
+                                    <b>一、话题背景</b><br>AA昍在回答他人问题时，发现了一个把一次涨薪变成两次的实用策略，随即在群内分享。<b>别有所为</b>表示这个群出现得时机正好，因为他刚启动一个"五年计划"。<br><br><b>二、主要观点</b><br>1. <b>核心策略</b>：在A司拿到B司的+20%涨幅offer后，先不急着跳。拿着offer找老东家A司直接谈涨薪，争取+15%的普涨。然后带着+15%后的待遇再去面新一轮，包括实时与B司沟通，看能否在+15%基础上再+20%。<br>2. <b>主动权在自己</b>：若拿到+15%+20%机会，一次涨薪变两次，跳；若拿不到，至少一年普涨15%没浪费。<br>3. <b>操作要点</b>：重点是要先拿到offer。不要等想跳了再面，而是至少每半年（最好每3个月）更新简历，保持市场敏感度。<br>4. <b>个人实践</b>：AA昍分享自己从10k起薪，第一年涨20%到12k，用这个方法又+20%到15k，实际涨薪50%。四年多从年薪10万做到100万。<br><br><b>三、结论与启发</b><br>跳槽不只是一次性动作，而是一个持续优化的过程。主动动起来，用市场和offer说话，职场的涨薪空间比被动等待大得多。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -1131,14 +1043,11 @@
                     <div>
                         <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
                         <div class="space-y-6">
-                            <!-- 关键结论 1 开始 -->
                             <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
                                 <div class="mb-4">
                                     <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
                                     <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
-                                        <p class="text-black text-base">
-                                            用外部offer作为内部涨薪的谈判筹码，<b>一次跳槽可以变成两次涨薪</b>；职业路径要拆解到“今年做什么”，边实践边纠错。
-                                        </p>
+                                        <p class="text-black text-base">用外部offer作为谈判筹码，先与老东家谈涨薪，再带着涨后待遇去面新一轮，实现一次涨薪变两次。</p>
                                     </div>
                                 </div>
                                 <div>
@@ -1146,70 +1055,125 @@
                                     <div class="space-y-2">
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    重点是，先拿到offer。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '重点是，先拿到offer。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
+                                                <p class="text-gray-800 italic text-sm flex-1">一次涨薪变两次，跳；若拿不到，至少一年普涨15%没浪费。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '一次涨薪变两次，跳；若拿不到，至少一年普涨15%没浪费。 - AA昍')" title="复制金句"><i class="fas fa-copy"></i></button>
                                             </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>AA昍</b></p>
                                         </div>
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    不主动地动起来，肯定没有机会。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '不主动地动起来，肯定没有机会。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
+                                                <p class="text-gray-800 italic text-sm flex-1">不主动地动起来，肯定没有机会。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '不主动地动起来，肯定没有机会。 - AA昍')" title="复制金句"><i class="fas fa-copy"></i></button>
                                             </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>AA昍</b></p>
                                         </div>
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    再大的目标，也能拆小拆细，一直拆到“我今年做什么”的程度。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '再大的目标，也能拆小拆细，一直拆到“我今年做什么”的程度。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
+                                                <p class="text-gray-800 italic text-sm flex-1">风口永远有，要自己努力找。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '风口永远有，要自己努力找。 - AA昍')" title="复制金句"><i class="fas fa-copy"></i></button>
                                             </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
-                                        </div>
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    拿公司管理你的方式，来管理你自己，你就学会工作了。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '拿公司管理你的方式，来管理你自己，你就学会工作了。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>AA昍</b></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- 关键结论 1 结束 -->
                         </div>
                     </div>
                 </div>
-                <!-- 热点话题卡片 结束 -->
+                <!-- 话题1 结束 -->
 
-                <!-- 热点话题卡片 开始 -->
-                <div class="bento-card p-6 rounded-xl"> 
+                <!-- 话题2 开始 -->
+                <div class="bento-card p-6 rounded-xl">
                     <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
                         <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            个人精力三分法：升职是螺旋，别当垃圾桶
+                            职业路径图：从年薪10万到100万的复盘与拆解
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            19:34 - 20:06
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            AA昍：“我当时在互联网，给自己规划的路径是：入职后尽早到p6，对应年薪20w以上。”
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">职业路径图</span>
+                            <span class="tag-item">目标拆解</span>
+                            <span class="tag-item">KPI管理</span>
+                            <span class="tag-item">升职加薪</span>
+                            <span class="tag-item">麦肯锡金字塔</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景</b><br><b>别有所为</b>提到自己正在执行一个"五年计划"，<b>AA昍</b>建议把计划换成更轻松的词，并分享了自己的职业路径复盘。<br><br><b>二、主要观点</b><br>1. <b>路径选择</b>：到P6之后，有专家和管理两个方向。AA昍试过带新人但性格太急带不动，于是走专家路线，但发现专家不如总监容易升。<br>2. <b>总监路径</b>：先进大厂学思维和标准流程，升小中层，跳小厂变真中层，积累管理经验，争取半步高管，再跳回大厂找总监机会。<br>3. <b>目标拆解</b>：再大的目标也能拆小拆细，一直拆到"我今年做什么"的程度，甚至细到季度，边实践边纠错。<br>4. <b>KPI思维</b>：拿公司管理你的方式管理自己，你就学会了工作，也创造了职业价值。<br>5. <b>三分法结构</b>：麦肯锡金字塔本质是决策树，人脑也就能记住三层。<br><br><b>三、结论与启发</b><br>职业发展不是直线上升，而是"规划-尝试-纠错"的螺旋。用公司KPI的方式管理自己的职业路径，是最直接的升职加薪思维。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">大目标要拆小拆细，用KPI方式管理自己，直到"我今年做什么"的程度，边实践边纠错。</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">拿公司管理你的方式，来管理你自己，你就学会工作了。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '拿公司管理你的方式，来管理你自己，你就学会工作了。 - AA昍')" title="复制金句"><i class="fas fa-copy"></i></button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>AA昍</b></p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">多描几条可能的路出来，然后往里套真实的人，越容易套中人的，说明这条路越是通。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '多描几条可能的路出来，然后往里套真实的人，越容易套中人的，说明这条路越是通。 - AA昍')" title="复制金句"><i class="fas fa-copy"></i></button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>AA昍</b></p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">再大的目标，也能拆小拆细，一直拆到「我今年做什么」的程度。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '再大的目标，也能拆小拆细，一直拆到「我今年做什么」的程度。 - AA昍')" title="复制金句"><i class="fas fa-copy"></i></button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>AA昍</b></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 话题2 结束 -->
+
+                <!-- 话题3 开始 -->
+                <div class="bento-card p-6 rounded-xl">
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            精力三分法：识别升职螺旋与死亡螺旋
                         </h4>
                         <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
                             <i class="fas fa-clock mr-1.5 text-gray-500"></i>
@@ -1220,7 +1184,7 @@
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            AA昍：“个人精力也可以三三分：a升职加薪的事——全力做；b日常维持的事——认真做；c被人甩锅的事——避免做”
+                            AA昍：“个人精力也可以三三分：a升职加薪的事——全力做；b日常维持的事——认真做；c被人甩锅的事——避免做。”
                         </p>
                     </div>
 
@@ -1228,9 +1192,10 @@
                         <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="tag-item">精力管理</span>
-                            <span class="tag-item">ABC分类</span>
-                            <span class="tag-item">自动化SOP</span>
-                            <span class="tag-item">升职螺旋</span>
+                            <span class="tag-item">ABC分类法</span>
+                            <span class="tag-item">升职加薪</span>
+                            <span class="tag-item">SOP流程</span>
+                            <span class="tag-item">职业价值</span>
                         </div>
                     </div>
 
@@ -1239,7 +1204,7 @@
                         <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、话题背景与起因</b><br>AA昍提出“个人精力也可以三三分”的框架，把每天的工作分成A类（升职加薪的事，全力做）、B类（日常维持的事，认真做）、C类（被人甩锅的事，避免做）。黑化肥会发灰立刻套用在自己的外包项目经理场景中，发现C类做得多，B类维持就够，却总想着多花时间优化，活儿越来越多。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>升职是把工作切分向下移动的过程</b>：你努力做+1关注的A事，就能让他升上去，然后你变成+1，原A事变成日常B事；你还想升，就要找到新一轮A事。同时，你原来的B事就甩给了曾经的同事，变成他们的C事。双方一个是升职螺旋，一个是死亡螺旋。<br>2. <b>忙不一定有用</b>：很多人“活儿越来越多，忙不过来”，可能是已经变成了同事升职时用的垃圾桶。你越忙，越升不上去，因为你做的全是没价值的C事。<br>3. <b>换位思考：领导也会三三分</b>：有脑子的下属全力培养，还能用的下属认真关注，没希望的下属当垃圾桶。资源只会倾斜给能提供KPI的A类人。<br>4. <b>执行建议</b>：把ABC偷偷写下来；用AI大量自动化BC任务；C类工作建立SOP标准流程，同事甩锅你就甩文档、甩流程，把时间占用压缩到接近0%；细分A，找明确标杆，研究对方三年前怎么走的，复刻路径。<br><br><b>三、结论与启发</b><br>用三三分法重新审视自己的工作，避免把时间消耗在低价值的C类事项上。善用AI、SOP和工作流程来压缩琐碎事务，把节省下来的时间投入真正的升职螺旋。
+                                    <b>一、话题背景</b><br>AA昍提出了个人精力三分法，把工作分为a（升职加薪）、b（日常维持）、c（被甩锅）三类，引出了关于"升职螺旋"与"死亡螺旋"的讨论。<br><br><b>二、主要观点</b><br>1. <b>三分法逻辑</b>：a类事全力做，b类事认真做，c类事避免做。升职的过程就是不停地把工作切分向下移动的过程。<br>2. <b>领导视角</b>：a有脑子的下属全力培养，b还能用的下属认真关注，c没希望的下属当垃圾桶。资源永远倾斜给a类人。<br>3. <b>外包项目经理案例</b>：黑化肥会发灰套用此框架，在外包公司把a定义为"有利于简历更新的/换更好工作的事"，b为"让项目正常运转"，c为"上下游甩过来的事"。<br>4. <b>优化建议</b>：分清abc并写下来；研究AI让bc任务自动化；在c类工作中建立SOP甩文档；找明确标杆复刻路径。<br><br><b>三、结论与启发</b><br>忙碌不等于有价值。要识别自己手里到底是a还是c，用流程和工具压缩低价值工作，把精力留给真正能带来升职加薪的事。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -1252,14 +1217,11 @@
                     <div>
                         <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
                         <div class="space-y-6">
-                            <!-- 关键结论 1 开始 -->
                             <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
                                 <div class="mb-4">
                                     <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
                                     <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
-                                        <p class="text-black text-base">
-                                            用ABC三分法审视工作，<b>别做同事升职路上的“垃圾桶”</b>；用AI和SOP压缩低价值事务，把时间留给升职加薪的A类事。
-                                        </p>
+                                        <p class="text-black text-base">将工作分为abc三类，聚焦a类，用SOP和AI自动化压缩bc类，把时间留给真正能带来升职加薪的事。</p>
                                     </div>
                                 </div>
                                 <div>
@@ -1267,169 +1229,42 @@
                                     <div class="space-y-2">
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    你越忙，你越升不上去，因为你做的全是没价值的c事。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '你越忙，你越升不上去，因为你做的全是没价值的c事。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
+                                                <p class="text-gray-800 italic text-sm flex-1">你越忙，你越升不上去，因为你做的全是没价值的c事。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '你越忙，你越升不上去，因为你做的全是没价值的c事。 - AA昍')" title="复制金句"><i class="fas fa-copy"></i></button>
                                             </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>AA昍</b></p>
                                         </div>
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    你可能已经变成了你同事升职时用的垃圾桶。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '你可能已经变成了你同事升职时用的垃圾桶。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
+                                                <p class="text-gray-800 italic text-sm flex-1">同事甩锅你就甩文档、甩流程，将这个时间占用压缩到接近0%。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '同事甩锅你就甩文档、甩流程，将这个时间占用压缩到接近0%。 - AA昍')" title="复制金句"><i class="fas fa-copy"></i></button>
                                             </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>AA昍</b></p>
                                         </div>
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    同事甩锅你就甩文档、甩流程，将这个时间占用压缩到接近0%。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '同事甩锅你就甩文档、甩流程，将这个时间占用压缩到接近0%。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
+                                                <p class="text-gray-800 italic text-sm flex-1">如果你强到公司不得不提拔你，又需要有证书，公司会给你出钱让你去考。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '如果你强到公司不得不提拔你，又需要有证书，公司会给你出钱让你去考。 - 光之咸鱼小玖苏卡不列会计王小全')" title="复制金句"><i class="fas fa-copy"></i></button>
                                             </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>光之咸鱼小玖苏卡不列会计王小全</b></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- 关键结论 1 结束 -->
                         </div>
                     </div>
                 </div>
-                <!-- 热点话题卡片 结束 -->
+                <!-- 话题3 结束 -->
 
-                <!-- 热点话题卡片 开始 -->
-                <div class="bento-card p-6 rounded-xl"> 
+                <!-- 话题4 开始 -->
+                <div class="bento-card p-6 rounded-xl">
                     <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
                         <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            体制内副科博弈：经济基础决定上层建筑
+                            考证还是学技术？职场新人的价值迷茫
                         </h4>
                         <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
                             <i class="fas fa-clock mr-1.5 text-gray-500"></i>
-                            20:18 - 20:24
-                        </span>
-                    </div>
-
-                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
-                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
-                        <p class="text-sm text-purple-600 italic">
-                            AA昍：“正好今天有一个私信找我挂号，是公务员，很有意思。他说自己刚提了副科，他们部门就两个人...”
-                        </p>
-                    </div>
-
-                    <div class="mb-5">
-                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">体制内晋升</span>
-                            <span class="tag-item">副科博弈</span>
-                            <span class="tag-item">利益冲突</span>
-                            <span class="tag-item">工作中留痕</span>
-                        </div>
-                    </div>
-
-                    <div class="mb-5">
-                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
-                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
-                            <div class="expandable-content" data-char-limit="200">
-                                <div class="content-preview">
-                                    <b>一、话题背景与起因</b><br>一位刚提副科的公务员向AA昍求助：部门只有两个人，他提了副科，另一位老科员一直觉得自己才是该被提的人，两人关系很不对付。他问“从心理层面如何理解对方的态度，以及怎么应对？”<br><br><b>二、主要观点与讨论详情</b><br>1. <b>本质分析</b>：经济基础决定上层建筑，对方的所有情绪都是表象，根源是你侵犯了他认为本该属于他的利益。<br>2. <b>破局思路</b>：寻找两个人的共同利益点。这个科室就两个人，如果从副科再升正科，提问人会被提走。可以说服对方：“现在这个位置被我占了，不好意思。如果咱们好好搭班子，我升到正科提走之后，这个位置空出来，你不就有机会了吗？”或者说：“哪怕我提上去了，这个位置也未必留给你；但如果我提不上去，这个位置是不是肯定没法给你？”<br>3. <b>如果谈不拢</b>：只能是处处留痕，别被对方坑了。因为对方的逻辑是“如果你能被干掉，位置就空出来了”。<br>4. <b>更完整的视角</b>：提问人41岁。体制内30岁提副科前途大好，40岁提副科基本上升迁无望。领导视角下，一个40多岁、能力不够但资历够的人，被放到一个既不重要、又有刺头的部门——这很可能说明领导已经将其边缘化。<br><br><b>三、结论与启发</b><br>体制内晋升中的冲突往往源于利益而非情绪。遇到这种情况，先找共同利益点，找不到就做好留痕、求稳为主。年龄是体制内的重要信号，40岁提副科应降低预期，以身体、家庭和稳定为重。
-                                </div>
-                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
-                                    <span class="expand-text">展开全文</span>
-                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
-                        <div class="space-y-6">
-                            <!-- 关键结论 1 开始 -->
-                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
-                                <div class="mb-4">
-                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
-                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
-                                        <p class="text-black text-base">
-                                            <b>利益冲突不可调和时，先找共同利益点，找不到就处处留痕</b>；体制内年龄决定晋升空间，40岁提副科应以求稳为主。
-                                        </p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
-                                    <div class="space-y-2">
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    经济基础决定上层建筑，对方对你的所有情绪都是表象，根源是利益。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '经济基础决定上层建筑，对方对你的所有情绪都是表象，根源是利益。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
-                                        </div>
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    他要的是位置空出来。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '他要的是位置空出来。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
-                                        </div>
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    良好的亲子关系可比逼着孩子从三本混到二本有用得多。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '良好的亲子关系可比逼着孩子从三本混到二本有用得多。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 关键结论 1 结束 -->
-                        </div>
-                    </div>
-                </div>
-                <!-- 热点话题卡片 结束 -->
-
-                <!-- 热点话题卡片 开始 -->
-                <div class="bento-card p-6 rounded-xl"> 
-                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
-                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            运维人的迷茫：先找目标，再谈PMP还是Python
-                        </h4>
-                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
-                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
-                            21:22 - 22:33
+                            21:22 - 22:25
                         </span>
                     </div>
 
@@ -1444,9 +1279,9 @@
                         <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="tag-item">PMP证书</span>
-                            <span class="tag-item">运维转型</span>
-                            <span class="tag-item">职业方向</span>
-                            <span class="tag-item">学习路径</span>
+                            <span class="tag-item">职业迷茫</span>
+                            <span class="tag-item">技能提升</span>
+                            <span class="tag-item">运维价值</span>
                         </div>
                     </div>
 
@@ -1455,7 +1290,7 @@
                         <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、话题背景与起因</b><br>英勇胡桃在北京一家给金融机构提供软件服务的公司做运维，月入6000，双休，能六点半下班。主要工作是环境部署、基础问题排查（配合AI）和简单脚本编写。迷茫该学Python自动化、k8s，还是考PMP，也对“管理”完全没概念。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>PMP证书的价值争议</b>：多位群友表示PMP“没什么用”，考试费3900元+培训约2000元，还要定期续费。@宝鹅、玩兔岁、电饭煲等纷纷表示PMP主要是在招投标时用于评分，或者体制内评职称，对商业公司价值有限。<br>2. <b>考证的时机定律</b>：AA昍总结——考证只在两种时候有用：一是硬条件，没证不让上（如法考、CPA）；二是你必须靠考试倒逼自己学会才能干好手头的事。否则不要专门为了考证而考证，尤其“家里还缺钱，现在不是继续当好学生的时候”。<br>3. <b>警惕“学生思维”</b>：转念之间指出，不论就业环境如何，先确定目标再倒推路径，不要一上来就“学什么考什么”。GO建议多刷招聘软件，看跳槽能干什么、能涨多少工资。<br>4. <b>AI替代风险</b>：AA昍认为Python以及所有编程的基础能力正在被AI快速替代，这是明确的趋势。<br>5. <b>重要转折</b>：聊到后面发现，英勇胡桃是北京本地人、不用租房、没有社交，看病还要父母掏钱，住院两次（血管瘤切除、鼻窦炎），日常有脂肪肝。家里经济最近比较紧张，但月入6000在北京更像“有班上”而非“真缺钱”。<br><br><b>三、结论与启发</b><br>迷茫时首先要找到目标，再决定学什么。PMP和Python都不是真正的解决方案。如果经济压力不大，就更需要先“成人”，找到让自己真正动起来的理由。必要时可以把身体管理作为第一个目标，先让自己忙起来。
+                                    <b>一、话题背景</b><br><b>英勇胡桃</b>提问：在金融软件公司做运维，月薪6000，有双休，应该学Python/k8s还是考PMP？对电脑不太感兴趣，不知道运维是否有价值。<br><br><b>二、主要观点</b><br>1. <b>PMP的真相</b>：玩兔岁直接说"考过，没什么用"。@宝鹅列了考试费用，培训费2000+考试费3900+补考2500。群友普遍认为这证主要用于招投标加分，对实际管理提升有限。<br>2. <b>AI替代趋势</b>：AA昍和转念之间都认为Python及编程基础能力快被AI替代了。转念之间说自己纯编程小白用AI也能实现想法，"让程序员将很快被淘汰有了实感"。<br>3. <b>先定目标再倒推</b>：转念之间反复强调"先去做的是确定目标，然后倒推，不是先去学什么考什么"，这是学生思维。<br>4. <b>考证只在两个时候有用</b>：AA昍总结——一是硬条件（如司法考试、CPA），二是倒逼自己学习。否则不要专门为了考证而考证。<br><br><b>三、争议焦点</b><br>有人建议先做技术再转销售，但GO认为要转销售原地就转，没必要等几年。<br><br><b>四、结论与启发</b><br>知识和技能不重要，直接向钱看，能换成工资的知识和技能才重要。先看本行业高收入人群如何获得高收入，再倒推自己该做什么。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -1468,14 +1303,11 @@
                     <div>
                         <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
                         <div class="space-y-6">
-                            <!-- 关键结论 1 开始 -->
                             <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
                                 <div class="mb-4">
                                     <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
                                     <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
-                                        <p class="text-black text-base">
-                                            PMP等证书在商业公司价值有限，<b>考证只在硬条件或倒逼学习时才需要</b>。真正的解法是先确定目标，再倒推路径。
-                                        </p>
+                                        <p class="text-black text-base">不要为了考证而考证，直接用钱倒推职业目标——能换成工资的知识和技能才重要。</p>
                                     </div>
                                 </div>
                                 <div>
@@ -1483,91 +1315,59 @@
                                     <div class="space-y-2">
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    如果你强到公司不得不提拔你，又需要有证书，公司会给你出钱让你去考这些东西。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '如果你强到公司不得不提拔你，又需要有证书，公司会给你出钱让你去考这些东西。 - 光之咸鱼')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
+                                                <p class="text-gray-800 italic text-sm flex-1">pmp---考过，没什么用。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, 'pmp---考过，没什么用。 - 玩兔岁')" title="复制金句"><i class="fas fa-copy"></i></button>
                                             </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>光之咸鱼</b>
-                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>玩兔岁</b></p>
                                         </div>
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    知识和技能不重要，直接向钱看，能够换成工资的知识和技能才是重要的。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '知识和技能不重要，直接向钱看，能够换成工资的知识和技能才是重要的。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
+                                                <p class="text-gray-800 italic text-sm flex-1">家里经济比较紧张的话，首先看钱，往自己能找到更多钱的方向走。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '家里经济比较紧张的话，首先看钱，往自己能找到更多钱的方向走。 - 讨厌的橙子🍊')" title="复制金句"><i class="fas fa-copy"></i></button>
                                             </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>讨厌的橙子🍊</b></p>
                                         </div>
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    先去做的是确定目标，然后倒推，不是先去学什么考什么。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '先去做的是确定目标，然后倒推，不是先去学什么考什么。 - 转念之间')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
+                                                <p class="text-gray-800 italic text-sm flex-1">知识和技能不重要，直接向钱看，能够换成工资的知识和技能才是重要的。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '知识和技能不重要，直接向钱看，能够换成工资的知识和技能才是重要的。 - AA昍')" title="复制金句"><i class="fas fa-copy"></i></button>
                                             </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>转念之间</b>
-                                            </p>
-                                        </div>
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    拿个证就能当项目经理了？多搞笑啊。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '拿个证就能当项目经理了？多搞笑啊。 - 转念之间')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>转念之间</b>
-                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>AA昍</b></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- 关键结论 1 结束 -->
                         </div>
                     </div>
                 </div>
-                <!-- 热点话题卡片 结束 -->
+                <!-- 话题4 结束 -->
 
-                <!-- 热点话题卡片 开始 -->
-                <div class="bento-card p-6 rounded-xl"> 
+                <!-- 话题5 开始 -->
+                <div class="bento-card p-6 rounded-xl">
                     <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
                         <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            身体是革命的本钱：把减脂当成一个项目来管理
+                            不做职场包子：冲突是工具，忍让是内耗
                         </h4>
                         <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
                             <i class="fas fa-clock mr-1.5 text-gray-500"></i>
-                            22:33 - 23:51
+                            15:38 - 18:35
                         </span>
                     </div>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            AA昍：“那就把健康当成项目来管理呀！PMP学不学也有用的地方了兄弟”
+                            咖喱多：“容易把冲突的结果灾难化，认为冲突是一件后果非常严重的事情。实践出真知，做了才知道并不会像想象中的那么糟糕。”
                         </p>
                     </div>
 
                     <div class="mb-5">
                         <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">身体健康</span>
-                            <span class="tag-item">减脂管理</span>
-                            <span class="tag-item">饮食结构</span>
-                            <span class="tag-item">打卡机制</span>
+                            <span class="tag-item">职场冲突</span>
+                            <span class="tag-item">反内耗</span>
+                            <span class="tag-item">情绪管理</span>
+                            <span class="tag-item">沟通技巧</span>
                         </div>
                     </div>
 
@@ -1576,7 +1376,7 @@
                         <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、话题背景与起因</b><br>英勇胡桃提到自己今年已住院两次（血管瘤切除、鼻窦炎），还有脂肪肝，体重从99kg减到93kg但效果不明显。AA昍幽默回应：“那就把健康当成项目来管理呀！PMP学不学也有用的地方了兄弟”，由此展开关于职场人健康管理的讨论。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>身体优先</b>：AA昍说“车没坏，才能上高速”，现在既要补胎又要充电，先修车。GO也强调“先解决主要矛盾”。仙行一步说“先把身体搞好，有精力有时间才跑得快”。<br>2. <b>大体重减脂原则</b>：先别爬坡，容易伤膝盖，可以平地慢走，每天走2小时。Han提醒大体重没必要先爬坡，身体别受伤。AA昍给出具体目标：“6k工资，正好6点下班，每天走6km，坚持6个月再说”。<br>3. <b>饮食结构调整</b>：不喝汤、不喝糖、不喝奶茶，少吃添加糖，多喝水、多咀嚼。可以看《本能减脂》《中国居民膳食指南》等书。<br>4. <b>把减脂当作项目管理</b>：每天在群里打卡，记录走了多长时间，不用追求距离和强度，先走起来，作为每天的工作。<br>5. <b>群友经验分享</b>：zc分享早爬十几层楼上楼，连爬四五天膝盖不舒服，判断是周边肌肉力量不足，要适度。熊博推荐《本能减脂》和《中国居民膳食指南》。<br><br><b>三、结论与启发</b><br>职场人要先把健康当成革命的本钱。减脂不必激进，用小步快跑、每日打卡的“项目管理”方式，比纠结PMP证书更能带来实在的变化。
+                                    <b>一、话题背景</b><br>AA昍转发了一段隔壁群关于"包子"心态的讨论，引发群友对职场冲突处理的深度思考。<b>咖喱多</b>分享了自己的观察：容易把冲突后果灾难化，做了才知道没那么糟糕。<br><br><b>二、主要观点</b><br>1. <b>冲突是常态</b>：胡山元说，以前觉得小冲突少，一来就是大的灾难性的。实际冲突之后感情更好了，对方也更懂你了。<br>2. <b>情绪是工具</b>：亮晶晶分享和资深销售吵架后反而被采纳方案的经历。AA昍总结"情绪是工作，甚至是武器"，"进攻是刀，防御是盾"。<br>3. <b>不畏惧冲突的底气</b>：真吵过了发现对方也就那么回事，都是纸老虎。关键在于不把自己放在"包子"的位置上。<br>4. <b>外耗替代内耗</b>：AA昍建议"总是内耗，不如试试外耗"，面对不合理需求，默认回答"做不了"，反而能提升沟通效率。<br><br><b>三、结论与启发</b><br>职场中适当的冲突是必要的泄压阀，它让关系更清晰、合作更高效。有技巧地使用情绪，比一味忍让更能赢得尊重。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -1589,14 +1389,11 @@
                     <div>
                         <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
                         <div class="space-y-6">
-                            <!-- 关键结论 1 开始 -->
                             <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
                                 <div class="mb-4">
                                     <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
                                     <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
-                                        <p class="text-black text-base">
-                                            <b>身体是革命的本钱</b>。大体重先慢走减脂，调整饮食结构，把健康当项目来打卡管理，比纠结证书更能改变状态。
-                                        </p>
+                                        <p class="text-black text-base">冲突是职场常态，也是关系建立的契机。有技巧地使用情绪，比一味忍让更能赢得尊重。</p>
                                     </div>
                                 </div>
                                 <div>
@@ -1604,71 +1401,122 @@
                                     <div class="space-y-2">
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    车没坏，才能上高速啊，现在又要补胎又要充电的，还追求啥推背感呀。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '车没坏，才能上高速啊，现在又要补胎又要充电的，还追求啥推背感呀。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
+                                                <p class="text-gray-800 italic text-sm flex-1">总是内耗，不如试试外耗。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '总是内耗，不如试试外耗。 - AA昍')" title="复制金句"><i class="fas fa-copy"></i></button>
                                             </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>AA昍</b></p>
                                         </div>
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    6k工资，正好6点下班，每天走6km，坚持6个月再说。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '6k工资，正好6点下班，每天走6km，坚持6个月再说。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
+                                                <p class="text-gray-800 italic text-sm flex-1">都是纸老虎。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '都是纸老虎。 - 讨厌的橙子🍊')" title="复制金句"><i class="fas fa-copy"></i></button>
                                             </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>讨厌的橙子🍊</b></p>
                                         </div>
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    物质决定意识，身体轻盈了看世界的感觉会不一样。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '物质决定意识，身体轻盈了看世界的感觉会不一样。 - 光之咸鱼')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
+                                                <p class="text-gray-800 italic text-sm flex-1">进攻是刀，防御是盾，情绪就是你的刀盾。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '进攻是刀，防御是盾，情绪就是你的刀盾。 - AA昍')" title="复制金句"><i class="fas fa-copy"></i></button>
                                             </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>光之咸鱼</b>
-                                            </p>
-                                        </div>
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    身体一定要好，不然你没有精力去和别人卷工作。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '身体一定要好，不然你没有精力去和别人卷工作。 - 讨厌的橙子🍊')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>讨厌的橙子🍊</b>
-                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>AA昍</b></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- 关键结论 1 结束 -->
                         </div>
                     </div>
                 </div>
-                <!-- 热点话题卡片 结束 -->
+                <!-- 话题5 结束 -->
+
+                <!-- 话题6 开始 -->
+                <div class="bento-card p-6 rounded-xl">
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            身体是本钱：大体重职场人的健康突围
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            22:25 - 23:37
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            AA昍：“车没坏，才能上高速啊，现在又要补胎又要充电的，还追求啥推背感呀。”
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">健康管理</span>
+                            <span class="tag-item">身体第一</span>
+                            <span class="tag-item">减脂</span>
+                            <span class="tag-item">职场精力</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景</b><br>英勇胡桃透露自己今年住院两次（血管瘤切除、鼻窦炎），日常需要吃药控制脂肪肝。群友一致认为，他的首要问题是健康，而不是职业规划。<br><br><b>二、主要观点</b><br>1. <b>物质决定意识</b>：讨厌的橙子🍊说"物质决定意识，身体一定要好。身体好了，才有精力去改变"。AA昍说"身体是革命的本钱，其它都是其次"。<br>2. <b>减脂策略</b>：AA昍建议先慢走减脂，不要急着爬坡伤膝盖。大体重掉秤很容易，更重要的是怎么不掉肌肉（Han）。<br>3. <b>生活化减脂</b>：AA昍强调"减脂不是一个过程，而是一种生活状态，健康的生活状态"。<br>4. <b>把健康当项目管理</b>：用PMP的思维方式管理减脂目标，正好学以致用。<br>5. <b>运动建议</b>：大体重先别爬坡，平地慢走，每天走够时长；注意饮食结构，少糖少汤；有条件可以看《本能减脂》《中国居民膳食指南》。<br><br><b>三、结论与启发</b><br>当身体亮红灯时，健康是第一优先级。把健康当项目来管理，先修好身体这辆车，再谈职业上的"推背感"。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">身体是革命的本钱。当健康亮红灯时，先修好身体这辆车，用项目管理思维管理减脂，再谈职业发展。</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">车没坏，才能上高速啊，现在又要补胎又要充电的，还追求啥推背感呀。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '车没坏，才能上高速啊，现在又要补胎又要充电的，还追求啥推背感呀。 - AA昍')" title="复制金句"><i class="fas fa-copy"></i></button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>AA昍</b></p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">物质决定意识，身体轻盈了看世界的感觉会不一样。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '物质决定意识，身体轻盈了看世界的感觉会不一样。 - 光之咸鱼小玖苏卡不列会计王小全')" title="复制金句"><i class="fas fa-copy"></i></button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>光之咸鱼小玖苏卡不列会计王小全</b></p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">身体是革命的本钱，其它都是其次。</p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '身体是革命的本钱，其它都是其次。 - AA昍')" title="复制金句"><i class="fas fa-copy"></i></button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">- <b>AA昍</b></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 话题6 结束 -->
 
             </div>
-            <!-- 列表容器结束: 讨论话题 -->
         </section>
-        <!-- === 模块二：火花碰撞时刻・热点话题 结束 === -->
 
-        <!-- 底部日期导航 -->
         <nav class="w-full mt-12" aria-label="日期导航（底部）">
             <div class="bento-card p-5">
                 <div class="flex items-center justify-between mb-4">
@@ -1686,18 +1534,17 @@
             </div>
         </nav>
 
-        <!-- === 文件底部 开始 === -->
         <footer class="w-full mt-16" role="contentinfo">
             <div class="bento-card p-8">
                 <div class="text-center text-gray-700 space-y-3">
                     <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-base">
                         <div class="flex items-center">
                             <i class="fas fa-database mr-2 text-[#4D6BFE]"></i>
-                            <span>微信群聊记录 - 漫道</span>
+                            <span>微信群聊记录 - 漫道-只聊工作不聊天</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-robot mr-2 text-[#4D6BFE]"></i>
-                            <span>报告生成于 2026-08-30 23:59:59</span>
+                            <span>报告生成于 2026-08-31 12:00:00</span>
                         </div>
                     </div>
                     <p class="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
@@ -1706,10 +1553,8 @@
                 </div>
             </div>
         </footer>
-        <!-- === 文件底部 结束 === -->
     </div>
 
-    <!-- 页面右下角悬浮按钮集 -->
     <div class="floating-action-stack" aria-label="页面快捷操作">
         <div class="toc-floating-container" aria-label="内容导航">
             <button id="toc-toggle" class="toc-floating-button" onclick="toggleToc(event)" aria-label="打开目录" aria-expanded="false" title="内容导航">
@@ -1746,61 +1591,44 @@
     </div>
 
     <script>
-        // 漫道日报：历史汇总与导航
-        // 🔴 漫道日报的线上归档地址（二维码与上一天/下一天导航都依赖它），必须与实际部署仓库一致
         const GJ_BASE_URL = 'https://missniannian.github.io/mandao';
         const GJ_FILE_PREFIX = '漫道日报_';
         const GJ_SUFFIX = '.html';
 
-
-        // 页面加载时滚动到顶部（避免保留上一页的滚动位置）
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
         window.scrollTo(0, 0);
-        
 
         document.addEventListener('DOMContentLoaded', function() {
-            // 初始化所有新功能
             initBackToTop();
             initThemeToggle();
             initTocHighlight();
             
-            // Bento card hover effect is handled by CSS :hover pseudo-class
-
-            // Number animation effect
             const numberElements = document.querySelectorAll('.number-display');
             numberElements.forEach(element => {
                 const finalValueText = element.textContent.replace(/,/g, '');
                 const finalValue = parseInt(finalValueText, 10);
-
                 if (isNaN(finalValue)) return;
-
                 let currentValue = 0;
-                const duration = 1500; // Animation duration in ms
-                const frameRate = 1000 / 60; // 60fps
+                const duration = 1500;
+                const frameRate = 1000 / 60;
                 const totalFrames = Math.round(duration / frameRate);
                 const increment = finalValue / totalFrames;
-
                 let currentFrame = 0;
                 const timer = setInterval(() => {
                     currentFrame++;
                     currentValue += increment;
-
                     if (currentFrame >= totalFrames) {
                         currentValue = finalValue;
                         clearInterval(timer);
                     }
-                    // Format number with commas for display
                     element.textContent = Math.floor(currentValue).toLocaleString('en-US');
                 }, frameRate);
             });
 
-
-            // HTML注释: 初始化展开功能
             initExpandableContent();
             
-            // 初始化日报导航
             try {
                 initDailyNavigation();
             } catch (e) {
@@ -1811,34 +1639,25 @@
         function initDailyNavigation() {
             const currentDateStr = getCurrentDateFromPage();
             if (!currentDateStr) return;
-
             const dt = new Date(currentDateStr);
             const prev = new Date(dt); prev.setDate(prev.getDate() - 1);
             const next = new Date(dt); next.setDate(next.getDate() + 1);
-
             const prevStr = formatDate(prev);
             const nextStr = formatDate(next);
-
             const prevButtons = ['prev-day', 'prev-day-bottom']
                 .map(id => document.getElementById(id))
                 .filter(Boolean);
             const nextButtons = ['next-day', 'next-day-bottom']
                 .map(id => document.getElementById(id))
                 .filter(Boolean);
-
-            if (!prevButtons.length && !nextButtons.length) {
-                return;
-            }
-
+            if (!prevButtons.length && !nextButtons.length) return;
             const updateButtons = (buttons, enabled, handler) => {
                 buttons.forEach(btn => {
                     btn.disabled = !enabled;
                     btn.onclick = enabled ? handler : null;
                 });
             };
-
             const isLocalFile = window.location.protocol === 'file:';
-            
             if (isLocalFile) {
                 const prevHandler = () => {
                     const [year, month] = prevStr.split('-');
@@ -1848,19 +1667,12 @@
                     const [year, month] = nextStr.split('-');
                     window.location.href = `../${year}年${parseInt(month, 10)}月/${GJ_FILE_PREFIX}${nextStr}${GJ_SUFFIX}`;
                 };
-
-                if (prevButtons.length) {
-                    updateButtons(prevButtons, true, prevHandler);
-                }
-                if (nextButtons.length) {
-                    updateButtons(nextButtons, true, nextHandler);
-                }
+                if (prevButtons.length) updateButtons(prevButtons, true, prevHandler);
+                if (nextButtons.length) updateButtons(nextButtons, true, nextHandler);
             } else {
-                // GitHub Pages模式：使用fetch检查文件是否存在
                 Promise.all([checkExists(prevStr), checkExists(nextStr)]).then(([pe, ne]) => {
                     const prevHandler = () => window.location.href = pe.url;
                     const nextHandler = () => window.location.href = ne.url;
-
                     updateButtons(prevButtons, !!pe.ok, prevHandler);
                     updateButtons(nextButtons, !!ne.ok, nextHandler);
                 }).catch(()=>{
@@ -1871,13 +1683,9 @@
         }
 
         function checkExists(dateStr) {
-            // 从日期字符串中提取年月 (格式: YYYY-MM-DD)
             const [year, month] = dateStr.split('-');
-
-            // 归档目录结构: 2026年/2026年8月/漫道日报_2026-08-28.html（月份无前导零）
             const monthNoPad = String(parseInt(month, 10));
             const url = `${GJ_BASE_URL}/${year}年/${year}年${monthNoPad}月/${GJ_FILE_PREFIX}${dateStr}${GJ_SUFFIX}`;
-            
             return fetch(url, { method: 'HEAD', cache: 'no-store' })
                 .then(r => r.ok ? { ok: true, url: url } : 
                     fetch(url, { method: 'GET', cache: 'no-store' })
@@ -1892,16 +1700,13 @@
         }
 
         function getCurrentDateFromPage() {
-            // 1) 从报告日期
             const el = document.getElementById('report-date');
             if (el) {
                 const m = el.textContent.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/);
                 if (m) return `${m[1]}-${pad2(m[2])}-${pad2(m[3])}`;
             }
-            // 2) 从 URL 文件名
             const fn = window.location.pathname.match(/漫道日报_(\d{4}-\d{2}-\d{2})\.html/);
             if (fn) return fn[1];
-            // 3) 从标题
             const tm = document.title.match(/(\d{4}-\d{2}-\d{2})/);
             if (tm) return tm[1];
             return null;
@@ -1914,9 +1719,6 @@
             return `${y}-${m}-${dd}`;
         }
 
-        // === 新增功能函数 ===
-        
-        // 目录浮动按钮展开/收起
         function toggleToc(event) {
             if (event) {
                 event.preventDefault();
@@ -1925,7 +1727,6 @@
             const panel = document.getElementById('toc-panel');
             const button = document.getElementById('toc-toggle');
             if (!panel || !button) return;
-
             if (panel.classList.contains('active')) {
                 closeTocPanel();
             } else {
@@ -1943,7 +1744,6 @@
             const panel = document.getElementById('toc-panel');
             const button = document.getElementById('toc-toggle');
             if (!panel || !button) return;
-
             panel.classList.remove('active');
             panel.setAttribute('aria-hidden', 'true');
             button.classList.remove('active');
@@ -1955,29 +1755,24 @@
             const panel = document.getElementById('toc-panel');
             const button = document.getElementById('toc-toggle');
             if (!panel || !button) return;
-
             if (!panel.contains(event.target) && !button.contains(event.target)) {
                 closeTocPanel();
             }
         }
-        
-        // 平滑滚动
+
         function smoothScroll(event, targetId) {
             event.preventDefault();
             const target = document.getElementById(targetId);
             if (target) {
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                // 更新目录激活状态
                 document.querySelectorAll('.toc-link').forEach(link => link.classList.remove('active'));
                 event.currentTarget.classList.add('active');
                 closeTocPanel();
             }
         }
-        
-        // 返回顶部功能
+
         function initBackToTop() {
             const btn = document.getElementById('backToTop');
-            
             window.addEventListener('scroll', () => {
                 if (window.pageYOffset > 300) {
                     btn.classList.add('visible');
@@ -1985,32 +1780,24 @@
                     btn.classList.remove('visible');
                 }
             });
-            
             btn.addEventListener('click', () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         }
-        
-        // 主题切换功能
+
         function initThemeToggle() {
             const btn = document.getElementById('themeToggle');
             const icon = document.getElementById('themeIcon');
-            
-            // 将预加载类转换为正式的dark-mode类
             document.documentElement.classList.remove('dark-mode-preload');
-            
-            // 检查本地存储的主题设置
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
                 document.body.classList.add('dark-mode');
                 icon.classList.remove('fa-moon');
                 icon.classList.add('fa-sun');
             }
-            
             btn.addEventListener('click', () => {
                 document.body.classList.toggle('dark-mode');
                 const isDark = document.body.classList.contains('dark-mode');
-                
                 if (isDark) {
                     icon.classList.remove('fa-moon');
                     icon.classList.add('fa-sun');
@@ -2022,15 +1809,12 @@
                 }
             });
         }
-        
-        // 目录高亮功能（滚动时自动高亮当前章节）
+
         function initTocHighlight() {
             const sections = ['section-overview', 'section-topics'];
             const tocLinks = document.querySelectorAll('.toc-link');
-            
             window.addEventListener('scroll', () => {
                 let current = '';
-                
                 sections.forEach(sectionId => {
                     const section = document.getElementById(sectionId);
                     if (section) {
@@ -2041,7 +1825,6 @@
                         }
                     }
                 });
-                
                 tocLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === '#' + current) {
@@ -2050,18 +1833,13 @@
                 });
             });
         }
-        
-        // 复制金句功能
+
         function copyQuote(button, text) {
             navigator.clipboard.writeText(text).then(() => {
                 const icon = button.querySelector('i');
                 const originalClass = icon.className;
-                
-                // 更改按钮状态
                 button.classList.add('copied');
                 icon.className = 'fas fa-check';
-                
-                // 2秒后恢复
                 setTimeout(() => {
                     button.classList.remove('copied');
                     icon.className = originalClass;
@@ -2071,49 +1849,33 @@
                 alert('复制失败，请手动复制');
             });
         }
-        
-        // HTML注释: 初始化展开功能
+
         function initExpandableContent() {
             const expandableContents = document.querySelectorAll('.expandable-content');
-            
             expandableContents.forEach(container => {
                 const charLimit = parseInt(container.getAttribute('data-char-limit')) || 200;
                 const contentPreview = container.querySelector('.content-preview');
                 const expandBtn = container.querySelector('.expand-btn');
-                
                 if (!contentPreview || !expandBtn) return;
-                
                 const fullContent = contentPreview.innerHTML;
                 const fullText = contentPreview.textContent || contentPreview.innerText;
-                
-                // HTML注释: 如果内容长度超过限制，则显示展开按钮
                 if (fullText.length > charLimit) {
-                    // HTML注释: 创建一个临时元素来正确截取HTML内容
                     const tempDiv = document.createElement('div');
                     tempDiv.innerHTML = fullContent;
-                    
-                    // HTML注释: 截取文本内容到指定长度
                     const truncatedText = fullText.substring(0, charLimit);
-                    
-                    // HTML注释: 使用更简单可靠的方法截取内容
                     let truncatedContent = '';
                     let charCount = 0;
-                    
-                    // HTML注释: 逐字符遍历，保持简单的HTML结构
                     const walker = document.createTreeWalker(
                         tempDiv,
                         NodeFilter.SHOW_TEXT,
                         null,
                         false
                     );
-                    
                     let node;
                     const textNodes = [];
                     while (node = walker.nextNode()) {
                         textNodes.push(node);
                     }
-                    
-                    // HTML注释: 计算需要保留的文本内容
                     for (let textNode of textNodes) {
                         const text = textNode.textContent;
                         if (charCount + text.length <= charLimit) {
@@ -2122,8 +1884,6 @@
                             const remainingChars = charLimit - charCount;
                             textNode.textContent = text.substring(0, remainingChars) + '...';
                             charCount = charLimit;
-                            
-                            // HTML注释: 新的、更干净的移除后续所有节点的逻辑
                             let currentNodeToClearAfter = textNode;
                             while (currentNodeToClearAfter && currentNodeToClearAfter !== tempDiv) {
                                 let sibling = currentNodeToClearAfter.nextSibling;
@@ -2134,28 +1894,21 @@
                                 }
                                 currentNodeToClearAfter = currentNodeToClearAfter.parentElement;
                             }
-                            break; // 完成截断和清理，跳出 textNodes 循环
+                            break;
                         }
                     }
-                    
                     const previewContent = tempDiv.innerHTML;
-                    
                     contentPreview.innerHTML = previewContent;
                     contentPreview.classList.add('collapsed');
                     expandBtn.style.display = 'flex';
-                    
-                    // HTML注释: 绑定展开/收起事件
                     expandBtn.addEventListener('click', function() {
                         const isExpanded = expandBtn.classList.contains('expanded');
-                        
                         if (isExpanded) {
-                            // HTML注释: 收起内容
                             contentPreview.innerHTML = previewContent;
                             contentPreview.classList.add('collapsed');
                             expandBtn.querySelector('.expand-text').textContent = '展开全文';
                             expandBtn.classList.remove('expanded');
                         } else {
-                            // HTML注释: 展开内容
                             contentPreview.innerHTML = fullContent;
                             contentPreview.classList.remove('collapsed');
                             expandBtn.querySelector('.expand-text').textContent = '收起';
@@ -2163,7 +1916,6 @@
                         }
                     });
                 } else {
-                    // HTML注释: 内容较短，隐藏展开按钮
                     expandBtn.style.display = 'none';
                 }
             });
@@ -2173,19 +1925,14 @@
     <!-- === 截图功能脚本 === -->
     <script>
     function initScreenshotButtons() {
-        const screenshotSections = [
-            'section-topics'
-        ];
-
+        const screenshotSections = ['section-topics'];
         screenshotSections.forEach(sectionId => {
             const section = document.getElementById(sectionId);
             if (!section) return;
-
             section.querySelectorAll('.bento-card').forEach(card => {
                 if (card.querySelector(':scope > .screenshot-btn')) return;
                 card.classList.add('relative');
                 card.classList.add('screenshot-title-safe');
-
                 const timeBadge = card.querySelector(':scope > div:first-of-type > span');
                 if (timeBadge && /\d{1,2}:\d{2}/.test(timeBadge.textContent)) {
                     card.classList.add('screenshot-has-time');
@@ -2195,7 +1942,6 @@
                         timeIcon.classList.add('topic-time-icon');
                     }
                 }
-
                 const button = document.createElement('button');
                 button.type = 'button';
                 button.className = 'screenshot-btn';
@@ -2219,20 +1965,17 @@
         if (titleMatch) {
             return `${titleMatch[1]}-${titleMatch[2].padStart(2, '0')}-${titleMatch[3].padStart(2, '0')}`;
         }
-
         const reportDateEl = document.getElementById('report-date');
         const reportDateText = reportDateEl ? reportDateEl.textContent.trim() : '';
         const textMatch = reportDateText.match(/(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日/);
         if (textMatch) {
             return `${textMatch[1]}-${textMatch[2].padStart(2, '0')}-${textMatch[3].padStart(2, '0')}`;
         }
-
         const decodedPath = decodeURIComponent(window.location.pathname || '');
         const urlMatch = decodedPath.match(/(\d{4})[-_.](\d{1,2})[-_.](\d{1,2})/);
         if (urlMatch) {
             return `${urlMatch[1]}-${urlMatch[2].padStart(2, '0')}-${urlMatch[3].padStart(2, '0')}`;
         }
-
         return '';
     }
 
@@ -2249,9 +1992,6 @@
         const suffix = (typeof GJ_SUFFIX !== 'undefined') ? GJ_SUFFIX : '.html';
         const [year, month] = dateIso.split('-');
         const monthNoPad = String(parseInt(month, 10));
-        // 归档目录结构: 2026年/2026年8月/漫道日报_2026-08-28.html（月份无前导零）
-        // 🔴 中文路径必须用 encodeURI 转为纯ASCII再传给二维码库：qrcodejs 无法编码
-        //    中文路径，会抛 "code length overflow" 异常（被catch吞掉后二维码空白）
         const path = `/${year}年/${year}年${monthNoPad}月/${prefix}${dateIso}${suffix}`;
         return baseUrl + encodeURI(path);
     }
@@ -2259,18 +1999,16 @@
     async function renderReportQr(target, url) {
         target.innerHTML = '';
         if (!window.QRCode) {
-            console.warn('[截图] QRCode 库未加载，尝试等待...');
             await new Promise(resolve => setTimeout(resolve, 500));
             if (!window.QRCode) {
-                console.error('[截图] QRCode 库加载失败，无法生成二维码');
+                console.error('[截图] QRCode 库加载失败');
                 return;
             }
         }
         if (!url) {
-            console.warn('[截图] 无有效日报URL，跳过二维码生成。url=', url);
+            console.warn('[截图] 无有效日报URL');
             return;
         }
-        console.log('[截图] 生成二维码，URL:', url, '目标元素尺寸:', target.offsetWidth, 'x', target.offsetHeight);
         try {
             new QRCode(target, {
                 text: url,
@@ -2281,14 +2019,7 @@
                 colorLight: '#ffffff',
                 correctLevel: QRCode.CorrectLevel.L
             });
-            // 等待 QRCode 渲染完成
             await new Promise(resolve => setTimeout(resolve, 200));
-            const generated = target.querySelector('canvas') || target.querySelector('img');
-            if (generated) {
-                console.log('[截图] 二维码生成成功，类型:', generated.tagName);
-            } else {
-                console.warn('[截图] QRCode 调用无报错，但未生成 canvas/img 元素');
-            }
         } catch (qrError) {
             console.error('[截图] 二维码生成失败:', qrError);
             target.innerHTML = '';
@@ -2298,8 +2029,6 @@
     function showFallbackOverlay(blob, topicTitle) {
         const oldMask = document.querySelector('.screenshot-fallback-mask');
         if (oldMask) oldMask.remove();
-
-        // 用 data URL 代替 blob URL，解决微信 WebView 长按保存失败的问题
         const reader = new FileReader();
         reader.onload = function() {
             const dataUrl = reader.result;
@@ -2310,7 +2039,6 @@
                 <img class="screenshot-fallback-img" src="${dataUrl}" alt="截图">
                 <button type="button" class="screenshot-fallback-close">关闭</button>
             `;
-
             mask.querySelector('.screenshot-fallback-close').addEventListener('click', () => {
                 mask.remove();
             });
@@ -2319,7 +2047,6 @@
                     mask.remove();
                 }
             });
-
             document.body.appendChild(mask);
         };
         reader.readAsDataURL(blob);
@@ -2336,32 +2063,25 @@
         const reportDateIso = extractReportDateIso();
         const publicUrl = getReportPublicUrl(reportDateIso);
 
-        // 标记按钮为截取中状态
         btnElement.classList.add('capturing');
         const originalIcon = btnElement.innerHTML;
         btnElement.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
 
         try {
-            // 收集要截图的内容：从标题到"关键结论与金句时刻"之前的所有内容
             const allChildren = Array.from(card.children);
             const captureElements = [];
-
             for (const child of allChildren) {
-                // 跳过截图按钮本身
                 if (child.classList.contains('screenshot-btn')) continue;
-                // 遇到"关键结论与金句时刻"区域就停止
                 const conclusionLabel = child.querySelector('p.text-sm.font-semibold');
                 if (conclusionLabel && conclusionLabel.textContent.includes('关键结论')) break;
                 captureElements.push(child);
             }
 
-            // 获取话题标题和日期
             const titleEl = card.querySelector('h4');
             const topicTitle = titleEl ? titleEl.textContent.trim().substring(0, 20) : '话题';
             const reportDateEl = document.getElementById('report-date');
             const reportDate = formatReportDateCn(reportDateIso) || (reportDateEl ? reportDateEl.textContent.trim() : '');
 
-            // 如果内容是收起状态，临时展开
             const expandBtns = card.querySelectorAll('.expand-btn:not(.expanded)');
             const expandedBtns = [];
             expandBtns.forEach(btn => {
@@ -2374,7 +2094,6 @@
                 }
             });
 
-            // 创建临时截图容器（560px 宽度，配合 scale 2 保证手机端可读性和清晰度）
             const wrapper = document.createElement('div');
             wrapper.className = 'screenshot-wrapper';
             wrapper.style.position = 'absolute';
@@ -2387,7 +2106,6 @@
             wrapper.style.textSizeAdjust = '100%';
             wrapper.style.fontSize = '16px';
 
-            // 品牌头部
             const brand = document.createElement('div');
             brand.className = 'screenshot-brand';
             brand.innerHTML = `
@@ -2402,22 +2120,16 @@
             `;
             wrapper.appendChild(brand);
 
-            // 内容区域
             const contentArea = document.createElement('div');
             contentArea.style.cssText = 'background:#ffffff; border-radius:12px; padding:24px; border:1px solid #e9e9eb; box-sizing:border-box;';
 
-            // 克隆要截图的元素
             captureElements.forEach(el => {
                 const clone = el.cloneNode(true);
-
-                // 移除展开按钮
                 const cloneBtns = clone.querySelectorAll('.expand-btn');
                 cloneBtns.forEach(b => b.remove());
-                // 移除 collapsed 样式
                 const collapsedEls = clone.querySelectorAll('.collapsed');
                 collapsedEls.forEach(c => c.classList.remove('collapsed'));
 
-                // html2canvas 对 flex 垂直居中支持不稳定，截图 DOM 使用固定像素布局。
                 const cloneClass = clone.className || '';
                 const isHeaderRow = cloneClass.indexOf('flex') !== -1 && cloneClass.indexOf('flex-col') !== -1;
                 const headerRow = isHeaderRow
@@ -2465,7 +2177,6 @@
                     icon.style.verticalAlign = 'top';
                 });
 
-                // 修复标签容器：固定高度和行高，避免标签底部参差不齐。
                 const tagContainers = clone.querySelectorAll('[class*="flex-wrap"]');
                 tagContainers.forEach(container => {
                     container.style.cssText = 'font-size:0; line-height:0;';
@@ -2502,7 +2213,6 @@
             await renderReportQr(footer.querySelector('.screenshot-footer-qr'), publicUrl);
             const qrTargetForDraw = footer.querySelector('.screenshot-footer-qr');
 
-            // 将 QR canvas 转换为 img，解决 html2canvas 无法渲染嵌套 canvas 的问题
             const qrCanvas = qrTargetForDraw ? qrTargetForDraw.querySelector('canvas') : null;
             if (qrCanvas) {
                 const qrImg = document.createElement('img');
@@ -2512,32 +2222,25 @@
                 qrImg.style.height = '94px';
                 qrImg.width = 94;
                 qrImg.height = 94;
-                // 等待 img 加载完成
                 await new Promise((resolve) => {
                     qrImg.onload = resolve;
                     qrImg.onerror = resolve;
                     qrImg.src = qrDataUrl;
                 });
-                // 清空容器后只放我们的 img（QRCode.js 会同时生成 canvas + img）
                 qrTargetForDraw.innerHTML = '';
                 qrTargetForDraw.appendChild(qrImg);
-                console.log('[截图] QR canvas 已转换为 img，src长度:', qrDataUrl.length);
             } else {
-                // 如果是 table 模式生成的 QR，尝试用 table 转 canvas 再转 img
                 const qrTable = qrTargetForDraw ? qrTargetForDraw.querySelector('table') : null;
                 if (qrTable) {
                     console.log('[截图] QR 为 table 模式，使用 html2canvas 转换');
                 }
             }
 
-            // 等待渲染
             await new Promise(resolve => setTimeout(resolve, 350));
 
-            // 检测环境
             const ua = navigator.userAgent;
             const isMobile = /iPhone|iPad|iPod|Android|Mobile/i.test(ua);
 
-            // 使用 html2canvas 生成图片
             const canvas = await html2canvas(wrapper, {
                 scale: 2,
                 useCORS: true,
@@ -2547,16 +2250,13 @@
                 windowWidth: 560
             });
 
-            // 清理临时容器
             document.body.removeChild(wrapper);
 
-            // 恢复收起状态
             expandedBtns.forEach(btn => btn.click());
 
             const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
             if (!blob) throw new Error('图片生成失败');
 
-            // 移动端（含微信）直接走浮层，桌面端尝试 clipboard
             let copied = false;
             if (!isMobile) {
                 try {
@@ -2572,7 +2272,6 @@
             }
 
             if (copied) {
-                // 成功：按钮变绿✓
                 btnElement.innerHTML = '<i class="fas fa-check"></i>';
                 btnElement.style.color = '#10b981';
                 setTimeout(() => {
@@ -2580,7 +2279,6 @@
                     btnElement.style.color = '';
                 }, 1500);
             } else {
-                // 移动端或 clipboard 失败：弹出图片浮层让用户长按保存
                 btnElement.innerHTML = originalIcon;
                 btnElement.style.color = '';
                 showFallbackOverlay(blob, topicTitle);
@@ -2592,7 +2290,6 @@
             btnElement.innerHTML = originalIcon;
             btnElement.style.color = '';
         } finally {
-            // 恢复按钮状态
             btnElement.classList.remove('capturing');
         }
     }
