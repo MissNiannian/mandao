@@ -6,21 +6,21 @@
     <title>漫道日报 2026-08-31</title>
     
     <!-- SEO 元数据 -->
-    <meta name="description" content="漫道日报 2026年8月31日 - 职场内耗与冲突处理、项目经理协作智慧、书昊述职求助等精彩内容分享">
-    <meta name="keywords" content="职场,漫道日报,内耗管理,项目经理,述职汇报,AI工具,项目管理">
+    <meta name="description" content="漫道日报 2026年8月31日 - 别当包子学会外耗、项目经理是半个直系领导、临时通知述职先抓+1对齐等精华讨论">
+    <meta name="keywords" content="职场,漫道日报,冲突管理,项目经理,述职汇报,职场认知,项目管理">
     <meta name="author" content="漫道">
     
     <!-- Open Graph / 社交媒体分享标签 -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="漫道日报 2026-08-31">
-    <meta property="og:description" content="职场内耗与冲突处理：从好学生到敢冲突；项目经理的协作智慧；书昊述职报告求助等深度讨论">
+    <meta property="og:description" content="别当包子，学会外耗；项目经理是半个直系领导；临时通知述职先抓+1对齐——今日群内精华讨论">
     <meta property="og:site_name" content="漫道">
     <meta property="og:locale" content="zh_CN">
     
     <!-- Twitter Card 标签 -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="漫道日报 2026-08-31">
-    <meta name="twitter:description" content="职场内耗与冲突处理、项目经理协作智慧、述职报告求助等精彩内容分享">
+    <meta name="twitter:description" content="别当包子学会外耗、项目经理是半个直系领导、临时通知述职先抓+1对齐等精华讨论">
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6C9T7FPDT2"></script>
@@ -252,6 +252,30 @@
 
         .history-link:hover {
             background: rgba(16, 185, 129, 0.15);
+            transform: translateY(-1px);
+        }
+
+        /* HTML注释: 返回主页按钮样式，链接固定指向漫道主页，样式与整体设计保持统一 */
+        .back-home-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            background: #f8fafc; /* slate-50 */
+            color: #475569; /* slate-600 */
+            border: 1px solid #e2e8f0; /* slate-200 */
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .back-home-link:hover {
+            background: #f1f5f9; /* slate-100 */
+            color: #10b981;
+            border-color: rgba(16, 185, 129, 0.3);
             transform: translateY(-1px);
         }
 
@@ -645,6 +669,20 @@
         
         body.dark-mode .history-link:hover {
             background: rgba(16, 185, 129, 0.28);
+        }
+
+        /* 深色模式下返回主页按钮 */
+        body.dark-mode .back-home-link {
+            background: #2f2f2f;
+            color: #a0a0a0;
+            border-color: #3a3a3a;
+            box-shadow: none;
+        }
+
+        body.dark-mode .back-home-link:hover {
+            background: #333333;
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.4);
         }
         
         /* 主题切换按钮 */
@@ -1046,6 +1084,14 @@
     <!-- HTML注释: 整体宽度通过 max-w-4xl 控制，实现日报宽度调小并保持响应式。-->
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
 
+        <!-- === 返回主页按钮 === -->
+        <!-- HTML注释: 返回主页按钮，链接固定指向漫道主页 https://md.xinjianhub.cn/ ，直接写死在 href 中，不得修改或省略 -->
+        <div class="w-full mb-4 flex justify-start">
+            <a href="https://md.xinjianhub.cn/" class="back-home-link">
+                <i class="fas fa-arrow-left text-xs"></i> 返回漫道主页
+            </a>
+        </div>
+
         <!-- === "群聊日报" 文件头区域 开始 === -->
         <!-- HTML注释: 此模块作为单独一行，占据整行宽度。包含日报主标题、报告日期和时间范围。 -->
         <!-- HTML注释: 新增了"群聊历史日报"链接，样式与整体设计保持统一协调 -->
@@ -1062,7 +1108,7 @@
                         </div>
                         <div class="flex items-center text-gray-700">
                             <i class="fas fa-clock mr-2 text-[#4D6BFE]"></i>
-                            <span>00:14 - 23:55</span>
+                            <span>02:04 - 01:23(次日)</span>
                         </div>
                     </div>
                     <!-- HTML注释: 漫道历史日报链接，样式与绿色主题统一，链接固定指向历史日报汇总页，不得修改或省略 -->
@@ -1106,15 +1152,15 @@
             </h2>
             <div class="bento-card p-8 bg-gradient-to-br from-[#10b981]/20 via-[#10b981]/10 to-[#10b981]/5 text-center rounded-2xl">
                 <div class="number-display text-[#4D6BFE]">
-                    289
+                    320
                 </div>
                 <p class="text-xl font-semibold text-black mt-3">总消息数量</p>
             </div>
         </section>
         <!-- === 模块一：总消息概览 结束 === -->
 
-        <!-- === 模块二：火花碰撞时刻・热点话题 开始 === -->
-        <!-- HTML注释: 此模块作为单独一行，占据整行宽度。用于展示群内讨论的热点话题。 -->
+        <!-- === 模块二：职通时刻・深度话题 开始 === -->
+        <!-- HTML注释: 此模块作为单独一行，占据整行宽度。承载全部深度内容：深度讨论、小会专题、有问必答、每日精选四类，统一为深度话题卡片呈现，不增设其他模块。 -->
         <section id="section-topics" class="w-full mb-12" aria-labelledby="section-topics-title">
             <h2 id="section-topics-title" class="section-title">
                 二、职通时刻・深度话题
@@ -1122,33 +1168,33 @@
             <!-- 列表容器: 讨论话题 -->
             <div class="space-y-8">
 
-                <!-- 热点话题卡片 1 开始 -->
+                <!-- 热点话题卡片 开始 -->
                 <div class="bento-card p-6 rounded-xl"> 
                     <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
                         <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            职场破局：从「好学生心态」到「敢于冲突」
+                            别当包子，学会外耗
                         </h4>
                         <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
                             <i class="fas fa-clock mr-1.5 text-gray-500"></i>
-                            00:32 - 18:45
+                            15:20 - 16:00
                         </span>
                     </div>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            啊怿子 -：不建议再做准备，就像这个小猫头像的同志说的，直接行动就行。
+                            AA昍：转一段隔壁群聊的职场话题——附一张应景的图
                         </p>
                     </div>
 
                     <div class="mb-5">
                         <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
                         <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">职场冲突</span>
+                            <span class="tag-item">内耗外耗</span>
                             <span class="tag-item">好学生心态</span>
-                            <span class="tag-item">职场内耗</span>
-                            <span class="tag-item">冲突管理</span>
-                            <span class="tag-item">情绪即武器</span>
-                            <span class="tag-item">外耗思维</span>
+                            <span class="tag-item">边界意识</span>
+                            <span class="tag-item">防御性驾驶</span>
                         </div>
                     </div>
 
@@ -1157,7 +1203,7 @@
                         <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、话题背景与起因</b><br>由<b>啊怿子 -</b>老师提出「不建议再做准备，直接行动」开头，引出「不要用准备来掩盖懒惰」的观点。随后<b>AA昍</b>转发了一段关于职场「包子心态」的群聊讨论：「总是内耗，不如试试外耗」成为金句。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>直接行动，拒绝空想</b>：<b>啊怿子 -</b>指出「要赚钱就赚钱，不要说什么等我拿到什么了再赚钱」，行动本身比准备更重要。<br>2. <b>梳理职场中的两种人</b>：<b>AA昍</b>转发的群聊中提到，职场中有人小心翼翼怕得罪人（包子），有人被小心翼翼怕被暴躁（刺头），建议「不管领导提啥需求，默认回答做不了，除非他强烈要求跪下求你」。<br>3. <b>冲突结果灾难化是误解</b>：<b>咖喱多</b>和<b>胡山元</b>都认为，人们容易把冲突的结果灾难化，实际冲突后关系可能更健康。<b>咖喱多</b>分享自己从「第一种人」变为「第二种人」的经历，效率大幅提升。<br>4. <b>情绪是工具</b>：<b>AA昍</b>转发群聊讨论「情绪是工作，甚至是武器」，<b>玩兔岁</b>进一步总结「情绪不是目的，是工具」。<br><br><b>三、结论与启发</b><br>核心在于突破「好学生心态」，不要等待完美时机；敢于表达立场、适当外耗，反而能建设更顺畅的合作关系。
+                                    <b>一、话题背景与起因</b><br><b>AA昍</b>在15:20转发了隔壁群聊的职场话题，核心是一位群友"一年了，怎么还是这样"的困境——面对领导需求总是内耗、不敢拒绝。<b>AA昍</b>给出的"猛药"是："不管领导提啥需求，默认回答做不了，除非他强烈要求跪下求你，并且能够当场严谨地论证这事能做。"这句话引发了关于职场"包子心态"与冲突处理的大讨论。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>内耗不如外耗</b>：<b>AA昍</b>直言"总是内耗，不如试试外耗"，并指出"包子总会有各种包子事，处理不过来"。他认为职场中有两种人：一种人"他来问你话的时候总是小心翼翼的，你还对他很不耐烦"，另一种人"你去问他话的时候总是小心翼翼的，生怕他突然间爆"。他建议"为什么不上来就做第二种人？也没欺负人啊，但省心。"<br><br>2. <b>冲突灾难化是内耗根源</b>：<b>咖喱多</b>分享感悟："容易把冲突的结果灾难化，认为冲突是一件后果非常严重的事情。实践出真知，做了才知道并不会像想象中的那么糟糕。"<b>胡山元</b>补充了两个关于冲突的误解："平时小的冲突少，一来就来个大的，灾难性的，不可挽回的"以及"对冲突的后果都是幻想，觉得冲突之后就没有朋友了。实际冲突之后感情更好了，对方也更懂你了。"<br><br>3. <b>敢于冲突反而赢得合作</b>：<b>咖喱多</b>分享了自己的转变："最近对接外部合作方特别多，曾经是第一种人，什么事都很难推动，还内耗的不行，每天上班都战战兢兢的。现在是第二种人，效率很高，合作也很顺畅，不仅我找别人合作更顺畅了，也有更多的人愿意跟我合作了，因为可以高效解决问题。有的合作方会直接说我好凶，但这波人反而是合作最顺畅的。"<br><br>4. <b>冲突是社会的泄压阀</b>：<b>AA昍</b>用高压锅比喻："社会治理就像设计高压锅，如果没有火，这个锅就没有用，但火大了，就得有一个稳定的泄压阀，否则就会炸锅。所以社会治理本质上就是持续而稳定地泄压。"<br><br>5. <b>流程是护盾</b>：<b>电饭煲</b>分享了自己的实践："直接拒绝产品的所有的新插入需求，日子爽多了。"<b>AA昍</b>补充："#敏捷开发 的默认标准流程SOP一直就是这样的，所以有很多流程工具可以很好地管理自己的工作。"<br><br><b>三、争议焦点</b><br>原教旨贝叶斯主义者认为"实事求是回答按照当前自己的预判做不了不难啊"，主张先坦诚沟通、试探对方是否讲理；<b>AA昍</b>则主张"默认做不了，老子手上还有事呢"，更加强硬。最终共识是：先有事儿说事儿试探对方是不是傻逼，如果对方真是傻逼再上强硬手段。<br><br><b>四、结论与启发</b><br>这场讨论揭示了职场冲突的本质：<b>冲突不是关系的破裂，而是边界的建立</b>。把冲突结果灾难化，本质上是"好学生心态"——总想讨好所有人，害怕任何负面评价。但职场是实力场，不是考场。敢于设立边界、敢于说"不"的人，反而因为效率高、沟通清晰而获得更多合作机会。可迁移的思维模型是"防御性驾驶"——不能等遇到路怒症的傻逼才学防御，平时就要有应对冲突的心理准备和行动策略。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -1176,7 +1222,9 @@
                                     <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
                                     <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
                                         <p class="text-black text-base">
-                                            <b>敢于冲突、适当外耗，是打破内耗循环的有效方式</b>。先把事情做起来，才能逐步建立擅长和喜欢。
+                                            <b>冲突是职场常态，不是灾难</b>。把冲突结果灾难化是内耗的根源，实践了才知道并不会像想象中那么糟糕。<br>
+                                            <b>外耗比内耗有效</b>——用行动和边界保护自己，而不是用情绪消耗自己。<br>
+                                            <b>敢于冲突的人反而获得更多合作机会</b>，因为能高效解决问题。
                                         </p>
                                     </div>
                                 </div>
@@ -1186,40 +1234,40 @@
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    要赚钱就赚钱，不要说什么等我拿到什么了，或者等我再读个什么再赚钱。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '要赚钱就赚钱，不要说什么等我拿到什么了，或者等我再读个什么再赚钱。 - 啊怿子 -')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>啊怿子 -</b>
-                                            </p>
-                                        </div>
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
                                                     总是内耗，不如试试外耗。
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '总是内耗，不如试试外耗。 - AA昍（转述）')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '总是内耗，不如试试外耗。 - AA昍')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
                                             <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍（转述）</b>
+                                                - <b>AA昍</b>
                                             </p>
                                         </div>
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    有事说事怎么会是得罪人呢？会得罪傻逼。
+                                                    实际冲突之后感情更好了，对方也更懂你了。
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '有事说事怎么会是得罪人呢？会得罪傻逼。 - 原教旨贝叶斯主义者')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '实际冲突之后感情更好了，对方也更懂你了。 - 胡山元')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
                                             <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>原教旨贝叶斯主义者</b>
+                                                - <b>胡山元</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    直接拒绝产品的所有的新插入需求，日子爽多了。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '直接拒绝产品的所有的新插入需求，日子爽多了。 - 电饭煲')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>电饭煲</b>
                                             </p>
                                         </div>
                                     </div>
@@ -1229,32 +1277,254 @@
                         </div>
                     </div>
                 </div>
-                <!-- 热点话题卡片 1 结束 -->
+                <!-- 热点话题卡片 结束 -->
 
-                <!-- 热点话题卡片 2 开始 -->
+                <!-- 热点话题卡片 开始 -->
                 <div class="bento-card p-6 rounded-xl"> 
                     <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
                         <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            咖喱多职场方法论：9条底层逻辑引发共鸣
+                            项目经理是半个直系领导
                         </h4>
                         <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
                             <i class="fas fa-clock mr-1.5 text-gray-500"></i>
-                            02:05 - 12:18
+                            20:57 - 22:30
                         </span>
                     </div>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            咖喱多：1.听取食物链上方的建议：更有经验、更有结果、更有段位的人
+                            咖喱多：今天被一个蠢蠢的项目经理气到了
                         </p>
                     </div>
 
                     <div class="mb-5">
                         <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">职场方法论</span>
-                            <span class="tag-item">注意力经济</span>
+                            <span class="tag-item">项目经理</span>
+                            <span class="tag-item">跨部门协作</span>
+                            <span class="tag-item">信息通道</span>
+                            <span class="tag-item">生态位</span>
+                            <span class="tag-item">资源利用</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景与起因</b><br><b>咖喱多</b>在20:57吐槽："今天被一个蠢蠢的项目经理气到了，我们是c端产品，话语权是产品>研发>项目经理。这个项目经理一直干不明白活，具体体现在搞不懂版本是什么、排期是什么、不知道主版和热更是什么、不知道怎么拉齐多业务方的节奏。"她问大家是否有更好的处理方案。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>教她干活 vs 喷她</b>：<b>子蟹</b>建议"一般遇到这种人我会教她干活，因为她干不明白耽误的是我的事，为了我的事儿，我会先教，教了不管用再走正常反馈流程"。<b>AA昍</b>则从"同事是敌人"的角度分析：如果C比较强势，坚决不跟傻子对接，傻子就会被转给软柿子B，那B就惨了。所以"能让傻子不敢跟自己对接，是一种本事。能跟没人敢对接的傻子对接，也是一种本事。"<br><br>2. <b>项目经理是信息通道</b>：<b>AA昍</b>分享："把项目经理想成一把刀，你天天给他买奶茶，把刀把子攥在手里。到时候那些催不动的人，你就让刀子去催。而且项目经理手里可能有好几个项目，你还能实时知道其他项目的进展。白给的信息通道。"<br><br>3. <b>项目经理是"太监生态位"</b>：<b>AA昍</b>进一步解释："项目经理实际上是半个直系领导，其他同事都是敌人，项目经理是朋友。相当于太监，可以这么理解。一定要和太监生态位搞好关系。"他补充："太监实际上是从「内臣」发展出来的，就是皇帝真正的自己人，比外面大殿里的大臣重要得多。"<br><br>4. <b>搅屎棍也有长处</b>：<b>咖喱多</b>与同事聊完后豁然开朗："在领导的视角里，这种人是很适合对外对接，尤其是做复杂的脏活的。一个人能进搅屎，意味着再困难的事情，他都可以推一推、动一动；这种人喜欢出头，很适合去帮领导传达那些不愿意自己出面的事情；这类人情绪控制能力比较差，也没什么心眼，可以背很多黑锅。"<br><br>5. <b>信息差的价值</b>：<b>咖喱多</b>分享："我会时不时就问下面人，他们leader最近都在做什么项目、谁owner、节奏怎么安排、资源怎么倾斜。他们信息太全面了，这些信息不论是用来打信息差还是调整自己部门业务目标和进度，都很有用。"<br><br><b>三、争议焦点</b><br><b>子蟹</b>认为应该教对方干活，因为"她干不明白耽误的是我的事"；<b>咖喱多</b>则认为"我没有责任教她怎么干活，只是喷她做得不对的地方"。<b>AA昍</b>的"连连看"分析揭示了背后的博弈：谁跟傻子对接，谁就惨了。最终大家认同：与其抱怨，不如把项目经理当作资源来经营。<br><br><b>四、结论与启发</b><br>这场讨论揭示了职场中的一个重要认知：<b>没有绝对的缺点，只有相对的特长</b>。一个人能成为"搅屎棍"，说明他有推动复杂事务的能力、有出头的勇气、有背锅的"价值"。关键是你怎么用他。可迁移的思维模型是"生态位思维"——识别每个人在组织中的位置和功能，把看似讨厌的人变成自己的资源。项目经理是信息中转站，是半个直系领导，是"太监生态位"——搞好了关系，你的项目就是优先级第一。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <!-- 关键结论 1 开始 -->
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            <b>项目经理是重要的信息通道和资源枢纽</b>，与其对抗不如利用。<br>
+                                            <b>没有绝对的缺点，只有相对的特长</b>——搅屎棍也有可用之处。<br>
+                                            <b>职场中要识别"生态位"</b>，与关键角色建立合作关系。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    项目经理实际上是半个直系领导，其他同事都是敌人，项目经理是朋友。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '项目经理实际上是半个直系领导，其他同事都是敌人，项目经理是朋友。 - AA昍')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>AA昍</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    没有绝对的缺点，只有相对的特长。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '没有绝对的缺点，只有相对的特长。 - 咖喱多')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>咖喱多</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    把项目经理想成一把刀，你天天给他买奶茶，把刀把子攥在手里。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '把项目经理想成一把刀，你天天给他买奶茶，把刀把子攥在手里。 - AA昍')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>AA昍</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 关键结论 1 结束 -->
+                        </div>
+                    </div>
+                </div>
+                <!-- 热点话题卡片 结束 -->
+
+                <!-- 热点话题卡片 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            临时通知述职，先抓+1对齐
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            23:03 - 23:39
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            书昊：各位同志好，我是书昊，目前就职于一家市区的城商银行
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">述职汇报</span>
+                            <span class="tag-item">银行职场</span>
+                            <span class="tag-item">临时任务</span>
+                            <span class="tag-item">向上对齐</span>
+                            <span class="tag-item">数据口径</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景与起因</b><br><b>书昊</b>在23:03发来求助：他在一家市区城商银行工作，财政局要在银行办理贷款，明天总行会议要讨论研究，他今晚被临时通知明天下午3点述职。他准备了述职报告和数据报表，想让群友提建议。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>数据口径问题</b>：<b>织痴诗</b>指出："'日均35次提升至单日高峰258次'口径不一致——一个是日均、一个是峰值，直接对比不严谨，容易被追问'日均现在是多少'。"<br><br>2. <b>图表完整性问题</b>：<b>光之咸鱼</b>说："这个图表感觉有点怪，26年没结束，对比图要么就估算一个数，不然一眼看过去就缺一块。"<br><br>3. <b>判断会议性质</b>：<b>AA昍</b>分析："按常理来说，时间这么紧，你的级别又不高，让你准备这个东西，应该不会有太大的用处（所以也就不会有太大的风险）。"<b>转念之间</b>分享了自己的经验："可能是露脸的机会，也有可能是拉你出来遛遛。"<br><br>4. <b>向上对齐</b>：<b>亮晶晶</b>建议"不清楚的东西抓着领导对齐"，<b>二小子</b>提醒"对部门外的汇报，要经过部门领导审查"。<br><br><b>三、结论与启发</b><br><b>书昊</b>的处境是典型的"临时通知、信息不足、级别不高"的职场场景。群友的建议归结为：先判断会议性质（看+2是否参会、通知渠道），再准备基础数据（口径统一、图表完整），最后向上对齐（明天早点到班问+1）。可迁移的思维模型是"信息不足时先判断形势，再决定投入度"——不是所有临时任务都值得全力投入，但态度要摆出来。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <!-- 关键结论 1 开始 -->
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            <b>临时通知的会议要先判断性质</b>——是露脸还是背锅，看+2是否参会。<br>
+                                            <b>数据口径要统一，图表要完整</b>，避免被追问。<br>
+                                            <b>明天早点到班，抓着+1对齐</b>是最稳妥的做法。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    可能是露脸的机会，也有可能是拉你出来遛遛。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '可能是露脸的机会，也有可能是拉你出来遛遛。 - 转念之间')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>转念之间</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    不清楚的东西抓着领导对齐。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '不清楚的东西抓着领导对齐。 - 亮晶晶')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>亮晶晶</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    对部门外的汇报，要经过部门领导审查。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '对部门外的汇报，要经过部门领导审查。 - 二小子')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>二小子</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 关键结论 1 结束 -->
+                        </div>
+                    </div>
+                </div>
+                <!-- 热点话题卡片 结束 -->
+
+                <!-- 热点话题卡片 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            九条职场认知，条条值钱
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            02:05 - 12:37
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            咖喱多：1.听取食物链上方的建议
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">职场认知</span>
+                            <span class="tag-item">方法论</span>
                             <span class="tag-item">销售思维</span>
                             <span class="tag-item">风险意识</span>
                             <span class="tag-item">个人品牌</span>
@@ -1266,7 +1536,7 @@
                         <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、话题背景与起因</b><br><b>咖喱多</b>在深夜分享了自己总结的9条职场方法论，从「听取食物链上方的建议」到「成功就会有批评」，被群友赞为「每一篇都是一篇小红书」。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>听取高位者建议</b>：更有经验、更有结果、更有段位的人，他们的认知上限会提升你的认知上限。<br>2. <b>钱只会流向注意力</b>：需要把自己的价值传播出去，拥有别人注意力的人，机会会自动找上门。<br>3. <b>学会销售方法争取资源</b>：让别人知道我是谁、我能提供什么、我为什么值得这次机会。<br>4. <b>拒绝唯一路径</b>：不要把消耗时间的方式当做唯一解决问题的方式，可以用钱、资源、他人的需求来交换。<br>5. <b>名气本身也是价值</b>：当你的名字代表了流量、信用、资源和影响力时，你的存在本身就是一个筹码。<br>6. <b>先做好再喜欢</b>：不是先喜欢一件事才能做好，而是先把一件事做好获得反馈之后，才会喜欢上它。<br>7. <b>风险意识</b>：谁制定的规则？谁有优势？自己有没有退出机制？输了以后能不能承受？<br><br><b>三、结论与启发</b><br>这套方法论的核心是<b>主动经营自己的价值</b>，把注意力、销售、风险都纳入职场生存的考量，不做被动的「好学生」。
+                                    <b>一、话题背景与起因</b><br><b>咖喱多</b>在02:05分享了自己总结的9条职场认知方法论，从"听取食物链上方的建议"到"成功就会有批评"，涵盖了认知升级、注意力经济、销售思维、人脉建设、资源交换、个人品牌、行动优先、风险意识和批评处理九个维度。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>认知升级</b>：<b>咖喱多</b>认为"听取食物链上方的建议：更有经验、更有结果、更有段位的人，他们的认知上限会提升你的认知上限"。<br><br>2. <b>注意力经济</b>："钱只会流向注意力：需要把自己的价值传播出去，拥有别人注意力的人，机会会自动找上门"。<br><br>3. <b>销售思维</b>："学会销售方法争取资源：让别人知道我是谁、我能提供什么、我为什么值得这次机会；主动争取资源、把自己的想法讲清楚、学会面对拒绝"。<br><br>4. <b>行动优先</b>："不是先喜欢一件事，才能把它做好；而是先把一件事做好，获得好的反馈之后，才会喜欢上一件事。不要过早地去判断自己不适合做什么事，因为擅长和喜欢，可能是一个结果"。<br><br>5. <b>风险意识</b>："谁制定的规则？谁有优势？自己有没有退出机制？输了以后能不能承受？"<br><br><b>三、结论与启发</b><br>这9条方法论的本质是<b>"从学生思维转向经营者思维"</b>——把自己当作一家公司来经营，注意力是流量、名字是品牌、人脉是渠道、风险是风控。<b>不知</b>评价"很有职场博主的感觉了，每一点都是一篇小红书"，<b>熊熊博</b>说"好有启发！谢谢咖喱！"。可迁移的思维模型是"个人品牌经营"：你的名字代表的是流量、信用、资源和影响力的综合体。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -1285,7 +1555,9 @@
                                     <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
                                     <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
                                         <p class="text-black text-base">
-                                            <b>先做出成果、再建立热爱</b>，避免「等我准备好再开始」的思维陷阱。价值传播与主动争取是职场进阶的关键。
+                                            <b>职场成长的核心是认知升级和资源交换</b>。<br>
+                                            <b>主动争取资源、建立人脉、传播价值</b>是职场进阶的关键。<br>
+                                            <b>风险意识是底线思维</b>——永远想好退出机制。
                                         </p>
                                     </div>
                                 </div>
@@ -1321,9 +1593,9 @@
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    擅长和喜欢，可能是一个结果。
+                                                    名气本身也是价值。
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '擅长和喜欢，可能是一个结果。 - 咖喱多')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '名气本身也是价值。 - 咖喱多')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
@@ -1338,35 +1610,35 @@
                         </div>
                     </div>
                 </div>
-                <!-- 热点话题卡片 2 结束 -->
+                <!-- 热点话题卡片 结束 -->
 
-                <!-- 热点话题卡片 3 开始 -->
+                <!-- 热点话题卡片 开始 -->
                 <div class="bento-card p-6 rounded-xl"> 
                     <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
                         <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            研发补锅局：加人还是重排优先级？
+                            大领导在，小领导没来，这活不重要
                         </h4>
                         <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
                             <i class="fas fa-clock mr-1.5 text-gray-500"></i>
-                            15:54 - 16:48
+                            00:18 - 00:29
                         </span>
                     </div>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            电饭煲：#每日一煲 老问题，新思考。
+                            转念之间：今天我想讲一个昨天晚上接了个大活
                         </p>
                     </div>
 
                     <div class="mb-5">
                         <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">项目管理</span>
-                            <span class="tag-item">加人决策</span>
-                            <span class="tag-item">汇报策略</span>
-                            <span class="tag-item">工作留痕</span>
-                            <span class="tag-item">优先级重排</span>
+                            <span class="tag-item">职场判断</span>
+                            <span class="tag-item">临时任务</span>
+                            <span class="tag-item">露脸背锅</span>
+                            <span class="tag-item">领导心思</span>
+                            <span class="tag-item">任务价值评估</span>
                         </div>
                     </div>
 
@@ -1375,7 +1647,7 @@
                         <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、话题背景与起因</b><br><b>电饭煲</b>分享了一个项目管理案例：不胜任的研发负责人被换掉后，新负责人「熬夜哥」带领团队补锅，但加班严重。团队提出加人需求，电饭煲没有直接向领导「贷款吃屎」，而是先让团队输出问题清单，再给领导打预防针。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>会上承诺 vs 会后加人</b>：<b>子蟹</b>质疑「会上承诺的事情，会后要反悔加人？」<b>电饭煲</b>承认确实存在这个问题。<br>2. <b>留痕是关键</b>：<b>仙行一步</b>分享习惯性开启会议录音并转写文字；<b>玩兔岁</b>建议会后在群里或邮件说明会议结论；<b>AA昍</b>总结「文档、邮件、wiki，总之是要留痕」是最有可能不背锅的操作。<br>3. <b>流程是护盾</b>：<b>电饭煲</b>提到直接拒绝产品所有新插入需求后「日子爽多了」，<b>AA昍</b>回应这正是敏捷开发的标准SOP。<br>4. <b>项目管理思维</b>：<b>李秀媚</b>建议用项目管理思维解题——加人不一定能解决问题，重排产品待办事项，消除积累的技术债，同时评估项目整体影响。<br><br><b>三、结论与启发</b><br>面对团队的人力诉求，管理者不应「贷款吃屎」，而应<b>用数据和方案说话</b>，让团队先输出问题清单和对策计划，再向领导呈现风险及备选方案。
+                                    <b>一、话题背景与起因</b><br><b>转念之间</b>在00:18分享了一个"昨天晚上接了个大活，然后加班的故事"：领导临时通知她上会，说有重要的紧急任务，让她准备材料并汇报。她发现这个活"很奇怪"。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>判断会议性质的线索</b>：<b>转念之间</b>发现："首先，如果是重要的接待，怎么可能会这么急？其次，我上了会，发现这个会有我的+1和+3，但是没有+2。"她由此判断："所以，其实这个会，是+3想要在大领导面前露脸的一个会。那我呢，这个讲好了吧，那个功劳就是+3的，讲的不好我背这个锅。"<br><br>2. <b>领导不上心的信号</b>："然后这个材料呢，让我搞，我的+1和+2都提供了一些素材，里面竟然还有错误，还好我对这些都比较谨慎，要不然就是又被领导坑死了。其实从这也可以能看出来，我的+1+2其实在里面没什么利益。所以这么不上心。"<br><br>3. <b>类似经历的印证</b>：<b>AA昍</b>分享了自己在第二家公司的经历："我级别不够，本来不该参与，VP非要把我叫上，说让我到时帮他解释数据。他销售出身，不懂数据分析。"结果他在会上表现亮眼，事后VP说"我想的就是小a也来参加这个会，好好杀杀市场部的气"，还把他加入了管理层会议名单。但<b>AA昍</b>分析："他其实未必最初是这个意思，他可能就是不太懂数据，不想自己讲而已。"<br><br>4. <b>露脸还是背锅</b>：<b>转念之间</b>总结："层次差太多的话，只要不漏屁股就行了。露脸那就是随缘了。我有时候会脑补一下，可能会问点啥，然后我怎么答，基本话术、形象动作脑子里过一下。"<br><br>5. <b>多想几步就横着走</b>：<b>AA昍</b>分享："我发现大部分人的努力程度几乎可以忽略，自己稍微多想几步，就横着走。"<br><br><b>三、争议焦点</b><br><b>石头</b>分享了自己的经历："我之前做过类似的汇报，但专业度差远了，紧张了一天，生怕数据不详实被骂。最后发现大领导只是想用这个数据给大家看下目前我负责板块的重要性。"<b>AA昍</b>则提醒："他到底怎么想的，没人知道，甚至他自己也不知道。领导永远会根据实际结果，反过来说自己'当时想的是'。"<br><br><b>四、结论与启发</b><br>这场讨论的核心是<b>"如何判断临时任务的价值"</b>。关键线索包括：通知的紧急程度、参会人员的层级结构（+2是否在场）、领导提供素材的质量。可迁移的思维模型是"任务价值评估"——接到任务时，不光要关注事情怎么做本身，也要关注这个事情对于周围人的意义。如果判断是露脸的机会，就好好准备；如果判断是背锅的活，就要找领导兑现其他好处。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -1394,7 +1666,9 @@
                                     <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
                                     <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
                                         <p class="text-black text-base">
-                                            <b>「流程是护盾」</b>，在向上汇报前先让团队把问题清单、对策、进展和风险用文字固化，是避免背锅的稳健操作。
+                                            <b>判断会议重要性看+2是否参会</b>——大领导在、小领导没来，说明这活没那么重要。<br>
+                                            <b>临时接活要关注事情对周围人的意义</b>，而不只是事情本身。<br>
+                                            <b>遇到可能背锅的活，要找领导兑现其他好处</b>。
                                         </p>
                                     </div>
                                 </div>
@@ -1404,14 +1678,138 @@
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    问就是不行，要想行就加人延期。
+                                                    大领导在，小领导没来，这会重要还是不重要。
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '问就是不行，要想行就加人延期。 - 电饭煲')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '大领导在，小领导没来，这会重要还是不重要。 - AA昍')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
                                             <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>电饭煲</b>
+                                                - <b>AA昍</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    层次差太多的话，只要不漏屁股就行了。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '层次差太多的话，只要不漏屁股就行了。 - 转念之间')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>转念之间</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    自己稍微多想几步，就横着走。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '自己稍微多想几步，就横着走。 - AA昍')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>AA昍</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 关键结论 1 结束 -->
+                        </div>
+                    </div>
+                </div>
+                <!-- 热点话题卡片 结束 -->
+
+                <!-- 热点话题卡片 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            加人不如重排优先级
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            15:54 - 16:45
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            电饭煲：#每日一煲 老问题，新思考
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">项目管理</span>
+                            <span class="tag-item">人力不足</span>
+                            <span class="tag-item">优先级</span>
+                            <span class="tag-item">向上汇报</span>
+                            <span class="tag-item">流程护盾</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景与起因</b><br><b>电饭煲</b>在15:54分享"#每日一煲 老问题，新思考"：团队研发负责人熬夜哥带着团队疯狂加班补窟窿，希望加个人来协助两个月。<b>电饭煲</b>的思考是"我不能拉着领导贷款吃屎，但需要提前给领导打一个预防针"。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>问题的本质</b>：<b>电饭煲</b>描述："熬夜哥带着团队吭哧吭哧干了两周，乌龟哥和负责哥留下来的破锅窟窿补得七七八八了。但还遗留一个老问题，就是熬夜哥和团队在疯狂加班，熬夜哥晚上基本干到凌晨3点，团队平均加班也是到1点以后。"<br><br>2. <b>会上承诺与会后反悔</b>：<b>子蟹</b>质疑："会上承诺的事情，会后要反悔加人？"<b>电饭煲</b>承认："对。"<b>仙行一步</b>补充："小公司经常见到这种操作，所有人面前凯凯而谈，乱许诺，等到出资源就不认了。"<br><br>3. <b>积小胜为大胜</b>：<b>二小子</b>分享了自己的经验："我是反过来，去年前年提的一堆软件需求，信息化部门拖了又拖，一测试一堆问题，我集中起来反馈，总想一下搞定，但实际情况信息化部门拖得很，我觉得自己有些速胜论。今年开始，主打持久战，我一个问题一反馈，不管问题大小，经常催，积小胜为大胜，这大半年过去了，形势发生了很大变化，进展也很好。"<br><br>4. <b>项目管理思维</b>：<b>李秀媚</b>建议："这完全可以用项目管理的思维解题，加人不一定能解决问题，重排产品待办事项，以消除积累的技术债，同时评估项目整体影响。"<br><br>5. <b>流程是护盾</b>：<b>AA昍</b>说："#敏捷开发 的默认标准流程SOP一直就是这样的，所以有很多流程工具可以很好地管理自己的工作。"<b>电饭煲</b>回应："对的对的，流程真的是一个很好的护盾。"<br><br><b>三、争议焦点</b><br>核心争议是"加人是否能解决问题"：熬夜哥认为需要加人，<b>电饭煲</b>认为有"贷款吃屎"的嫌疑，<b>李秀媚</b>认为加人不一定能解决问题。最终<b>电饭煲</b>的解决方案是：让熬夜哥文字输出问题清单、对策计划、当前进展和后续风险，再拿着这个去给领导打预防针。汇报顺序是：先说结论（窟窿ABC已均有措施、验证进度正常），再展开进展，最后提风险和对策。<br><br><b>四、结论与启发</b><br>这场讨论揭示了项目管理中的<b>"预期管理"智慧</b>：面对人力不足，直接向领导叫唤"要人"是下策，带着数据和方案去谈才是上策。可迁移的思维模型是"风险预防针"——在风险变成问题之前，用文字化的清单、计划、进展和风险分析，让领导提前有心理预期。同时，"积小胜为大胜"的策略提醒我们：面对复杂问题，不要追求一次性解决，而是持续小步快跑。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <!-- 关键结论 1 开始 -->
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            <b>加人不是唯一解</b>，重排优先级、管理预期才是关键。<br>
+                                            <b>向上汇报要先说结论和数据</b>，再提风险和方案。<br>
+                                            <b>流程是护盾</b>——用流程工具管理好自己的工作边界。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    加人不一定能解决问题，重排产品待办事项。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '加人不一定能解决问题，重排产品待办事项。 - 李秀媚')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>李秀媚</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    积小胜为大胜。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '积小胜为大胜。 - 二小子')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>二小子</b>
                                             </p>
                                         </div>
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
@@ -1427,19 +1825,6 @@
                                                 - <b>电饭煲</b>
                                             </p>
                                         </div>
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    文档，邮件，wiki，总之是要留痕。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '文档，邮件，wiki，总之是要留痕。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1447,339 +1832,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- 热点话题卡片 3 结束 -->
-
-                <!-- 热点话题卡片 4 开始 -->
-                <div class="bento-card p-6 rounded-xl"> 
-                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
-                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            AI日报与时间块：人人都是「干中学」
-                        </h4>
-                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
-                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
-                            21:37 - 22:00
-                        </span>
-                    </div>
-
-                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
-                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
-                        <p class="text-sm text-purple-600 italic">
-                            转念之间：30号的日报已更新，供参考～～～
-                        </p>
-                    </div>
-
-                    <div class="mb-5">
-                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">AI日报</span>
-                            <span class="tag-item">GPT Image</span>
-                            <span class="tag-item">时间块</span>
-                            <span class="tag-item">低代码</span>
-                            <span class="tag-item">干中学</span>
-                        </div>
-                    </div>
-
-                    <div class="mb-5">
-                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
-                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
-                            <div class="expandable-content" data-char-limit="200">
-                                <div class="content-preview">
-                                    <b>一、话题背景与起因</b><br><b>转念之间</b>分享了自己基于AI生成的日报链接，并展示了用GPT Image制作的案例卡片。群友围绕AI生图、日报自动化、以及个性化工具展开了讨论。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>GPT Image的文字生成能力</b>：<b>转念之间</b>表示「目前只有这个模型支持清晰的文字，其他模型都会出现乱码」，<b>@宝鹅</b>也认可「gpt的生图能力真的很不错」。<br>2. <b>AI降低了编程门槛</b>：<b>别有所为</b>感叹「我也在随手写一些小网页……主要因为没有想法，想法不成熟，而不是不会编程」，<b>讨厌的橙子🍊</b>分享了自己做小网页工具的经历。<br>3. <b>时间块记录法</b>：<b>AA昍</b>展示了自己用Excel自制的时间块记录法，半小时一格记录工作内容，被问「是不是在练习什么」时笑称「妈妈——牛来！」<br>4. <b>AI无法替代人脑</b>：<b>啊怿子 -</b>补充「AI不知道什么是重要的，什么是不重要的」，把AI比作自动麻将桌，能洗牌码牌但不会帮你胡牌。<br><br><b>三、结论与启发</b><br>AI工具已经能帮助普通人实现「干中学」，不再需要专门学编程；但<b>想法和判断力仍是关键</b>，AI只是辅助工具。
-                                </div>
-                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
-                                    <span class="expand-text">展开全文</span>
-                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
-                        <div class="space-y-6">
-                            <!-- 关键结论 1 开始 -->
-                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
-                                <div class="mb-4">
-                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
-                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
-                                        <p class="text-black text-base">
-                                            <b>AI是「自动麻将桌」</b>，能帮你洗牌码牌，但胡牌还得靠自己的技术。工具越强大，越需要清晰的目标感与判断力。
-                                        </p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
-                                    <div class="space-y-2">
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    什么都不懂的人，简单的想法，AI完全可以帮助实现了。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '什么都不懂的人，简单的想法，AI完全可以帮助实现了。 - 转念之间')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>转念之间</b>
-                                            </p>
-                                        </div>
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    把AI当自动麻将桌，可以推进去洗牌码牌，但要胡牌，还是得靠自己的技术。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '把AI当自动麻将桌，可以推进去洗牌码牌，但要胡牌，还是得靠自己的技术。 - 啊怿子 -')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>啊怿子 -</b>
-                                            </p>
-                                        </div>
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    感谢各位老师，我感觉我快行了。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '感谢各位老师，我感觉我快行了。 - 光之咸鱼小玖苏卡不列会计王小全')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>光之咸鱼小玖苏卡不列会计王小全</b>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 关键结论 1 结束 -->
-                        </div>
-                    </div>
-                </div>
-                <!-- 热点话题卡片 4 结束 -->
-
-                <!-- 热点话题卡片 5 开始 -->
-                <div class="bento-card p-6 rounded-xl"> 
-                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
-                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            把项目经理当「自己人」：信息中转站的价值
-                        </h4>
-                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
-                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
-                            22:04 - 22:30
-                        </span>
-                    </div>
-
-                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
-                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
-                        <p class="text-sm text-purple-600 italic">
-                            咖喱多：跟一起合作的同事聊了一下，豁然开朗了。
-                        </p>
-                    </div>
-
-                    <div class="mb-5">
-                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">项目经理</span>
-                            <span class="tag-item">跨部门协作</span>
-                            <span class="tag-item">信息差</span>
-                            <span class="tag-item">职场生态位</span>
-                            <span class="tag-item">搅屎棍</span>
-                        </div>
-                    </div>
-
-                    <div class="mb-5">
-                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
-                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
-                            <div class="expandable-content" data-char-limit="200">
-                                <div class="content-preview">
-                                    <b>一、话题背景与起因</b><br><b>咖喱多</b>被一个「蠢蠢的项目经理」气到，在群里吐槽。随后自己反思「搅屎棍到底有什么长处」，发现对方适合做复杂的脏活、帮领导传达不便出面的事、情绪控制差可背黑锅。与此同时，<b>AA昍</b>分享了自己与项目经理合作的丰富经验，把项目经理比作「太监」生态位。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>没有绝对缺点，只有相对特长</b>：<b>咖喱多</b>认识到「搅屎棍」在领导眼里适合对外对接、做复杂脏活、背黑锅，这些「长处」自己也可以用起来。<br>2. <b>项目经理是信息中转站</b>：<b>AA昍</b>认为项目经理是「半个直系领导」，掌握着所有项目进展、人员薪资甚至股票信息，「谁抱住了项目经理的大腿，谁的项目就永远是优先级第一」。<br>3. <b>「太监」生态位类比</b>：<b>AA昍</b>解释太监相当于「内臣」，是皇帝真正的自己人，比外面大臣重要得多。这个类比是为了帮助理解。<br>4. <b>搞好关系不等于买奶茶</b>：<b>AA昍</b>坦言自己上班时从没给同事买过奶茶，关系好是因为学心理学能帮忙解答问题、记性不好不会传话、为人放松没正型。<br>5. <b>换位思考的价值</b>：<b>AA昍</b>用「同事发了打不开的链接」举例，说明在群里开口前先验证自己设备的重要性，避免在领导面前显得不靠谱。<br><br><b>三、结论与启发</b><br>项目经理是职场中的「关键枢纽」，与其对抗不如善加利用；同时，<b>「没有绝对缺点，只有相对特长」</b>，搅屎棍也有其独特价值。
-                                </div>
-                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
-                                    <span class="expand-text">展开全文</span>
-                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
-                        <div class="space-y-6">
-                            <!-- 关键结论 1 开始 -->
-                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
-                                <div class="mb-4">
-                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
-                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
-                                        <p class="text-black text-base">
-                                            <b>「没有绝对的缺点，只有相对的特长」</b>，项目经理是信息中转站，值得当作「自己人」维护关系。
-                                        </p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
-                                    <div class="space-y-2">
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    没有绝对的缺点，只有相对的特长。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '没有绝对的缺点，只有相对的特长。 - 咖喱多')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>咖喱多</b>
-                                            </p>
-                                        </div>
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    项目经理实际上是半个直系领导，其他同事都是敌人，项目经理是朋友。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '项目经理实际上是半个直系领导，其他同事都是敌人，项目经理是朋友。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
-                                        </div>
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    一定要和太监生态位搞好关系。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '一定要和太监生态位搞好关系。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 关键结论 1 结束 -->
-                        </div>
-                    </div>
-                </div>
-                <!-- 热点话题卡片 5 结束 -->
-
-                <!-- 热点话题卡片 6 开始 -->
-                <div class="bento-card p-6 rounded-xl"> 
-                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
-                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            临时通知的总行述职：书昊的述职报告求助
-                        </h4>
-                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
-                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
-                            23:03 - 23:39
-                        </span>
-                    </div>
-
-                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
-                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
-                        <p class="text-sm text-purple-600 italic">
-                            书昊：各位同志好，我是书昊，目前就职于一家市区的城商银行。
-                        </p>
-                    </div>
-
-                    <div class="mb-5">
-                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">银行述职</span>
-                            <span class="tag-item">临时汇报</span>
-                            <span class="tag-item">数据口径</span>
-                            <span class="tag-item">向上对齐</span>
-                            <span class="tag-item">可视化</span>
-                        </div>
-                    </div>
-
-                    <div class="mb-5">
-                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
-                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
-                            <div class="expandable-content" data-char-limit="200">
-                                <div class="content-preview">
-                                    <b>一、话题背景与起因</b><br><b>书昊</b>在城商银行工作，晚上被临时通知明天下午要在总行会议上对财政代发业务述职。他准备了述职报告模板和报表，向群友求助修改建议。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>明确汇报场景</b>：<b>书昊</b>推测会议与财政局贷款有关，总行需讨论额度利率；自己可能只是「摆个架子混个眼熟」。<b>黑化肥会发灰</b>确认这是内部讨论会。<br>2. <b>数据图表建议</b>：<b>光之咸鱼小玖苏卡不列会计王小全</b>指出26年没结束，对比图应估算全年数，不应用半拉的方柱；<b>耿</b>建议如果求稳保持现状，或者用预估数据+调整坐标轴突出增长。<br>3. <b>文稿瑕疵</b>：<b>织痴诗</b>指出「日均35次提升至单日高峰258次」口径不一致（日均vs峰值），且稿子用「亿元」报表用「万元」单位不统一。<b>书昊</b>承认这是想留的钩子，报表是AI生成的没细改。<br>4. <b>对齐策略</b>：<b>AA昍</b>建议「按常理来说，时间这么紧，你的级别又不高……明天早点到班，抓着+1问问最稳妥」；<b>二小子</b>建议「明天上午要给+1看一下，让他提意见」；<b>亮晶晶</b>总结「不清楚的东西抓着领导对齐」。<br>5. <b>心态调整</b>：<b>Hedwig</b>说「当你觉得自己内耗的时候，你的内耗程度其实已经爆表了」。<br><br><b>三、结论与启发</b><br>面对临时通知的汇报，先把框架搭起来，明天和+1对齐；注意数据口径与单位一致性。
-                                </div>
-                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
-                                    <span class="expand-text">展开全文</span>
-                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
-                        <div class="space-y-6">
-                            <!-- 关键结论 1 开始 -->
-                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
-                                <div class="mb-4">
-                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
-                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
-                                        <p class="text-black text-base">
-                                            <b>面对临时汇报，先搭框架再与+1对齐</b>；数据口径要统一，图表避免「半拉方柱」。
-                                        </p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
-                                    <div class="space-y-2">
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    不清楚的东西抓着领导对齐。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '不清楚的东西抓着领导对齐。 - 亮晶晶（干中学）')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>亮晶晶（干中学）</b>
-                                            </p>
-                                        </div>
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    当你觉得自己内耗的时候，你的内耗程度其实已经爆表了。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '当你觉得自己内耗的时候，你的内耗程度其实已经爆表了。 - Hedwig')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>Hedwig</b>
-                                            </p>
-                                        </div>
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    如果领导从上到下都没给你明确指令，有可能这个事不重要，有没有可能抓你挨打？
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '如果领导从上到下都没给你明确指令，有可能这个事不重要，有没有可能抓你挨打？ - 光之咸鱼小玖苏卡不列会计王小全')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>光之咸鱼小玖苏卡不列会计王小全</b>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 关键结论 1 结束 -->
-                        </div>
-                    </div>
-                </div>
-                <!-- 热点话题卡片 6 结束 -->
+                <!-- 热点话题卡片 结束 -->
 
             </div>
             <!-- 列表容器结束: 讨论话题 -->
         </section>
-        <!-- === 模块二：火花碰撞时刻・热点话题 结束 === -->
+        <!-- === 模块二：职通时刻・深度话题 结束 === -->
 
         <!-- 底部日期导航 -->
         <nav class="w-full mt-12" aria-label="日期导航（底部）">
@@ -1810,7 +1868,7 @@
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-robot mr-2 text-[#4D6BFE]"></i>
-                            <span>报告生成于 2026-08-31 23:55:00</span>
+                            <span>报告生成于 2026-08-31 12:00:00</span>
                         </div>
                     </div>
                     <p class="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
@@ -1860,8 +1918,8 @@
 
     <script>
         // 漫道日报：历史汇总与导航
-        // 🔴 漫道日报的线上归档地址（二维码与上一天/下一天导航都依赖它），必须与实际部署仓库一致
-        const GJ_BASE_URL = 'https://missniannian.github.io/mandao';
+        // 🔴 漫道日报的线上地址（二维码与上一天/下一天导航都依赖它），必须与实际部署域名一致
+        const GJ_BASE_URL = 'https://md.xinjianhub.cn';
         const GJ_FILE_PREFIX = '漫道日报_';
         const GJ_SUFFIX = '.html';
 
@@ -1969,7 +2027,7 @@
                     updateButtons(nextButtons, true, nextHandler);
                 }
             } else {
-                // GitHub Pages模式：使用fetch检查文件是否存在
+                // 线上模式：使用fetch检查文件是否存在
                 Promise.all([checkExists(prevStr), checkExists(nextStr)]).then(([pe, ne]) => {
                     const prevHandler = () => window.location.href = pe.url;
                     const nextHandler = () => window.location.href = ne.url;
@@ -1984,12 +2042,8 @@
         }
 
         function checkExists(dateStr) {
-            // 从日期字符串中提取年月 (格式: YYYY-MM-DD)
-            const [year, month] = dateStr.split('-');
-
-            // 归档目录结构: 2026年/2026年8月/漫道日报_2026-08-28.html（月份无前导零）
-            const monthNoPad = String(parseInt(month, 10));
-            const url = `${GJ_BASE_URL}/${year}年/${year}年${monthNoPad}月/${GJ_FILE_PREFIX}${dateStr}${GJ_SUFFIX}`;
+            // 线上为扁平结构：漫道日报_YYYY-MM-DD.html 直接位于域名根目录
+            const url = `${GJ_BASE_URL}/${GJ_FILE_PREFIX}${dateStr}${GJ_SUFFIX}`;
             
             return fetch(url, { method: 'HEAD', cache: 'no-store' })
                 .then(r => r.ok ? { ok: true, url: url } : 
@@ -2360,12 +2414,10 @@
         if (!dateIso) return baseUrl;
         const prefix = (typeof GJ_FILE_PREFIX !== 'undefined') ? GJ_FILE_PREFIX : '漫道日报_';
         const suffix = (typeof GJ_SUFFIX !== 'undefined') ? GJ_SUFFIX : '.html';
-        const [year, month] = dateIso.split('-');
-        const monthNoPad = String(parseInt(month, 10));
-        // 归档目录结构: 2026年/2026年8月/漫道日报_2026-08-28.html（月份无前导零）
+        // 线上为扁平结构：漫道日报_YYYY-MM-DD.html 直接位于域名根目录
         // 🔴 中文路径必须用 encodeURI 转为纯ASCII再传给二维码库：qrcodejs 无法编码
         //    中文路径，会抛 "code length overflow" 异常（被catch吞掉后二维码空白）
-        const path = `/${year}年/${year}年${monthNoPad}月/${prefix}${dateIso}${suffix}`;
+        const path = `/${prefix}${dateIso}${suffix}`;
         return baseUrl + encodeURI(path);
     }
 
