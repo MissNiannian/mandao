@@ -37,7 +37,7 @@ window.CASES = [
         "author": "AA昍"
       }
     ],
-    "link": "../2026年/2026年8月/漫道日报_2026-08-30.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-08-30.html",
     "category": "升职与涨薪"
   },
   {
@@ -66,7 +66,7 @@ window.CASES = [
         "author": "AA昍"
       }
     ],
-    "link": "../2026年/2026年8月/漫道日报_2026-08-30.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-08-30.html",
     "category": "升职与涨薪"
   },
   {
@@ -95,7 +95,7 @@ window.CASES = [
         "author": "AA昍"
       }
     ],
-    "link": "../2026年/2026年8月/漫道日报_2026-08-30.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-08-30.html",
     "category": "效率与AI"
   },
   {
@@ -124,7 +124,7 @@ window.CASES = [
         "author": "AA昍"
       }
     ],
-    "link": "../2026年/2026年8月/漫道日报_2026-08-30.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-08-30.html",
     "category": "升职与涨薪"
   },
   {
@@ -153,7 +153,7 @@ window.CASES = [
         "author": "啊怿子 -"
       }
     ],
-    "link": "../2026年/2026年8月/漫道日报_2026-08-30.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-08-30.html",
     "category": "向上管理"
   },
   {
@@ -182,7 +182,7 @@ window.CASES = [
         "author": "AA昍"
       }
     ],
-    "link": "../2026年/2026年8月/漫道日报_2026-08-30.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-08-30.html",
     "category": "财务与生活"
   },
   {
@@ -212,7 +212,7 @@ window.CASES = [
         "author": "咖喱多"
       }
     ],
-    "link": "../2026年/2026年8月/漫道日报_2026-08-31.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-08-31.html",
     "category": "认知与心态"
   },
   {
@@ -241,7 +241,7 @@ window.CASES = [
         "author": "AA昍"
       }
     ],
-    "link": "../2026年/2026年8月/漫道日报_2026-08-31.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-08-31.html",
     "category": "认知与心态"
   },
   {
@@ -270,7 +270,7 @@ window.CASES = [
         "author": "咖喱多"
       }
     ],
-    "link": "../2026年/2026年8月/漫道日报_2026-08-31.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-08-31.html",
     "category": "团队与管理"
   },
   {
@@ -299,7 +299,7 @@ window.CASES = [
         "author": "AA昍"
       }
     ],
-    "link": "../2026年/2026年8月/漫道日报_2026-08-31.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-08-31.html",
     "category": "向上管理"
   },
   {
@@ -328,7 +328,7 @@ window.CASES = [
         "author": "电饭煲"
       }
     ],
-    "link": "../2026年/2026年8月/漫道日报_2026-08-31.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-08-31.html",
     "category": "团队与管理"
   },
   {
@@ -358,7 +358,7 @@ window.CASES = [
         "author": "豹"
       }
     ],
-    "link": "../2026年/2026年9月/漫道日报_2026-09-01.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-09-01.html",
     "category": "甩锅与自保"
   },
   {
@@ -387,7 +387,7 @@ window.CASES = [
         "author": "豆子"
       }
     ],
-    "link": "../2026年/2026年9月/漫道日报_2026-09-01.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-09-01.html",
     "category": "甩锅与自保"
   },
   {
@@ -417,7 +417,7 @@ window.CASES = [
         "author": "西东"
       }
     ],
-    "link": "../2026年/2026年9月/漫道日报_2026-09-01.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-09-01.html",
     "category": "跳槽与转行"
   },
   {
@@ -447,7 +447,7 @@ window.CASES = [
         "author": "AA昍"
       }
     ],
-    "link": "../2026年/2026年9月/漫道日报_2026-09-01.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-09-01.html",
     "category": "认知与心态"
   },
   {
@@ -476,7 +476,7 @@ window.CASES = [
         "author": "AA昍"
       }
     ],
-    "link": "../2026年/2026年9月/漫道日报_2026-09-01.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-09-01.html",
     "category": "财务与生活"
   },
   {
@@ -506,7 +506,7 @@ window.CASES = [
         "author": "AA昍"
       }
     ],
-    "link": "../2026年/2026年9月/漫道日报_2026-09-01.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-09-01.html",
     "category": "跳槽与转行"
   },
   {
@@ -536,7 +536,7 @@ window.CASES = [
         "author": "AA昍"
       }
     ],
-    "link": "../2026年/2026年9月/漫道日报_2026-09-02.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-09-02.html",
     "category": "跳槽与转行"
   },
   {
@@ -565,7 +565,7 @@ window.CASES = [
         "author": "光之咸鱼"
       }
     ],
-    "link": "../2026年/2026年9月/漫道日报_2026-09-02.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-09-02.html",
     "category": "团队与管理"
   },
   {
@@ -594,7 +594,7 @@ window.CASES = [
         "author": "AA昍"
       }
     ],
-    "link": "../2026年/2026年9月/漫道日报_2026-09-02.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-09-02.html",
     "category": "跳槽与转行"
   },
   {
@@ -623,7 +623,7 @@ window.CASES = [
         "author": "Bazinga"
       }
     ],
-    "link": "../2026年/2026年9月/漫道日报_2026-09-02.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-09-02.html",
     "category": "效率与AI"
   },
   {
@@ -652,7 +652,7 @@ window.CASES = [
         "author": "AA昍"
       }
     ],
-    "link": "../2026年/2026年9月/漫道日报_2026-09-02.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-09-02.html",
     "category": "认知与心态"
   },
   {
@@ -681,7 +681,7 @@ window.CASES = [
         "author": "AA昍"
       }
     ],
-    "link": "../2026年/2026年9月/漫道日报_2026-09-02.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-09-02.html",
     "category": "认知与心态"
   },
   {
@@ -710,7 +710,7 @@ window.CASES = [
         "author": "咖喱多"
       }
     ],
-    "link": "../2026年/2026年9月/漫道日报_2026-09-02.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-09-02.html",
     "category": "认知与心态"
   },
   {
@@ -740,7 +740,7 @@ window.CASES = [
         "author": "不渡 今天管理领导了吗"
       }
     ],
-    "link": "../2026年/2026年9月/漫道日报_2026-09-03.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-09-03.html",
     "category": "跳槽与转行"
   },
   {
@@ -770,7 +770,7 @@ window.CASES = [
         "author": "Exhibition_"
       }
     ],
-    "link": "../2026年/2026年9月/漫道日报_2026-09-03.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-09-03.html",
     "category": "认知与心态"
   },
   {
@@ -800,7 +800,7 @@ window.CASES = [
         "author": "子蟹"
       }
     ],
-    "link": "../2026年/2026年9月/漫道日报_2026-09-03.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-09-03.html",
     "category": "团队与管理"
   },
   {
@@ -830,7 +830,7 @@ window.CASES = [
         "author": "AA昍"
       }
     ],
-    "link": "../2026年/2026年9月/漫道日报_2026-09-03.html",
+    "link": "https://md.xinjianhub.cn/漫道日报_2026-09-03.html",
     "category": "向上管理"
   }
 ];
