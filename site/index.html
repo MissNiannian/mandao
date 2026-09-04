@@ -422,8 +422,8 @@
                     </div>
                 </div>
 
-                <!-- 右：小模块 2 个（占位） -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-8 h-full auto-rows-fr">
+                <!-- 右：小模块 1 个 -->
+                <div class="grid grid-cols-1 gap-x-5 gap-y-8 h-full auto-rows-fr">
                     <a href="gallery.html" class="bento-card p-6 flex flex-col min-h-[220px] group hover:-translate-y-1 hover:shadow-lg transition-all">
                         <h3 class="text-lg font-black text-gray-900 mb-3 flex items-center gap-3">
                             <span class="w-9 h-9 rounded-xl bg-emerald-50 text-brand flex items-center justify-center group-hover:scale-105 transition-transform">
@@ -438,20 +438,6 @@
                             <i class="fas fa-arrow-right-to-bracket"></i> 进入画廊
                         </span>
                     </a>
-                    <div class="bento-card p-6 flex flex-col min-h-[220px] group">
-                        <h3 class="text-lg font-black text-gray-900 mb-3 flex items-center gap-3">
-                            <span class="w-9 h-9 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center group-hover:scale-105 transition-transform">
-                                <i class="fas fa-clone text-base"></i>
-                            </span>
-                            案例卡片
-                        </h3>
-                        <p class="text-gray-500 text-sm leading-relaxed mb-4">
-                            群内真实职场案例的深度拆解，一张卡讲透一件事。
-                        </p>
-                        <span class="mt-auto w-full py-2.5 rounded-lg bg-gray-50 text-gray-400 text-sm font-bold text-center flex items-center justify-center gap-2 cursor-not-allowed">
-                            <i class="fas fa-hourglass-half"></i> 占位 · 待补
-                        </span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -554,7 +540,9 @@
                 popup.style.top = y + 'px';
 
                 clearTimeout(popupHideTimer);
-                popupHideTimer = setTimeout(() => popup.classList.add('hidden'), 8000);
+            };
+            window.__hideQuote = function () {
+                popup.classList.add('hidden');
             };
             document.getElementById('hero-quote-close').addEventListener('click', function () {
                 popup.classList.add('hidden');
@@ -745,26 +733,29 @@
                 mesh.userData.glow = glow;
             }
 
-            // ---- 交互：点星 → 随机金句 ----
+            // ---- 交互：鼠标停留 → 随机金句，移开 → 隐藏 ----
             const raycaster = new THREE.Raycaster();
             const pointer = new THREE.Vector2();
             let mouseX = 0, mouseY = 0;
+            let activeStar = null; // 当前悬停的星星（用于避免同一颗星反复重新随机）
 
             canvas.addEventListener('pointermove', function (e) {
                 const rect = canvas.getBoundingClientRect();
                 pointer.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
                 pointer.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
                 mouseX = pointer.x; mouseY = pointer.y;
-            });
 
-            canvas.addEventListener('pointerdown', function (e) {
-                const rect = canvas.getBoundingClientRect();
-                pointer.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-                pointer.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
                 raycaster.setFromCamera(pointer, camera);
                 const hits = raycaster.intersectObjects(starMeshes, false);
-                if (hits.length > 0 && window.__showQuoteAt) {
-                    window.__showQuoteAt(e.clientX, e.clientY);
+                if (hits.length > 0) {
+                    const star = hits[0].object;
+                    if (star !== activeStar && window.__showQuoteAt) {
+                        activeStar = star;
+                        window.__showQuoteAt(e.clientX, e.clientY);
+                    }
+                } else {
+                    activeStar = null;
+                    if (window.__hideQuote) window.__hideQuote();
                 }
             });
 
