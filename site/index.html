@@ -139,6 +139,52 @@
 
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* ================= 移动端适配（仅小屏生效，不影响桌面端） ================= */
+        @media (max-width: 640px) {
+            /* 顶部导航：logo 一行、锚点一行，缩小字号与间距 */
+            #page-toc > div {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+            }
+            #page-toc .no-scrollbar {
+                width: 100%;
+                flex-wrap: wrap;
+                overflow-x: visible;
+                gap: 2px;
+            }
+            #page-toc .no-scrollbar a {
+                font-size: 12px;
+                padding: 5px 9px;
+            }
+
+            /* 主容器：收窄板块之间的上下留白 */
+            #top {
+                padding-top: 0.75rem;
+                padding-bottom: 0.75rem;
+            }
+            #top > * + * { margin-top: 2.25rem; }
+
+            /* 漫道何意 / 加入我们 / 群里聊什么：紧凑 */
+            #meaning .grid { gap: 0.75rem; }
+            #meaning .bento-card { padding: 1.15rem 1.15rem 1.4rem; }
+            #meaning .bento-card h3 { margin-bottom: 0.65rem; font-size: 1.05rem; }
+            #meaning .bento-card p { font-size: 13px; line-height: 1.85; }
+
+            #join-us section > div { padding: 1.15rem; }
+            #join-us .max-w-2xl > p { margin-bottom: 1rem; font-size: 15px; }
+
+            #topics .grid { gap: 0.75rem; }
+            #topics .bento-card { padding: 1rem; }
+            #topics .bento-card > span { margin-bottom: 0.65rem; }
+            #topics .bento-card h3 { margin-bottom: 0.4rem; }
+            #topics .bento-card p { font-size: 13px; }
+
+            /* 各 section 标题与内容间距收紧 */
+            #meaning > h2, #join-us > h2, #topics > h2 { margin-bottom: 0.25rem; }
+            #topics > p { font-size: 13px; }
+        }
     </style>
 </head>
 
@@ -416,9 +462,6 @@
                             class="w-full px-4 py-2.5 rounded-lg bg-brand text-white text-sm font-bold text-center hover:bg-emerald-700 shadow-md shadow-emerald-500/20 transition-all flex items-center justify-center gap-2">
                             <i class="fas fa-book-open"></i> 阅读最新日报
                         </a>
-                        <a href="https://md.xinjianhub.cn/" target="_blank" rel="noopener" class="mt-3 w-full px-4 py-2 rounded-lg bg-gray-50 text-gray-500 text-xs font-medium text-center hover:text-brand hover:bg-emerald-50 transition-colors flex items-center justify-center gap-1.5">
-                            查看完整日报列表 <i class="fas fa-arrow-right text-[10px]"></i>
-                        </a>
                     </div>
                 </div>
 
@@ -442,7 +485,6 @@
             </div>
         </div>
 
-        <p class="text-center text-[11px] text-gray-400 pb-4">* 本站为 demo，金句与内容均为示例数据</p>
     </main>
 
     <!-- ================= 页脚（紧凑） ================= -->
@@ -733,31 +775,48 @@
                 mesh.userData.glow = glow;
             }
 
-            // ---- 交互：鼠标停留 → 随机金句，移开 → 隐藏 ----
+            // ---- 交互：桌面端悬停显示，移动端点一下显示 ----
             const raycaster = new THREE.Raycaster();
             const pointer = new THREE.Vector2();
             let mouseX = 0, mouseY = 0;
             let activeStar = null; // 当前悬停的星星（用于避免同一颗星反复重新随机）
 
-            canvas.addEventListener('pointermove', function (e) {
+            function pickAt(clientX, clientY) {
                 const rect = canvas.getBoundingClientRect();
-                pointer.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-                pointer.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+                pointer.x = ((clientX - rect.left) / rect.width) * 2 - 1;
+                pointer.y = -((clientY - rect.top) / rect.height) * 2 + 1;
                 mouseX = pointer.x; mouseY = pointer.y;
-
                 raycaster.setFromCamera(pointer, camera);
-                const hits = raycaster.intersectObjects(starMeshes, false);
-                if (hits.length > 0) {
-                    const star = hits[0].object;
-                    if (star !== activeStar && window.__showQuoteAt) {
-                        activeStar = star;
+                return raycaster.intersectObjects(starMeshes, false);
+            }
+
+            const isTouch = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+            if (isTouch) {
+                // 移动端：点一下星星显示，点空白隐藏
+                canvas.addEventListener('click', function (e) {
+                    const hits = pickAt(e.clientX, e.clientY);
+                    if (hits.length > 0 && window.__showQuoteAt) {
                         window.__showQuoteAt(e.clientX, e.clientY);
+                    } else if (window.__hideQuote) {
+                        window.__hideQuote();
                     }
-                } else {
-                    activeStar = null;
-                    if (window.__hideQuote) window.__hideQuote();
-                }
-            });
+                });
+            } else {
+                // 桌面端：悬停显示，移开隐藏
+                canvas.addEventListener('pointermove', function (e) {
+                    const hits = pickAt(e.clientX, e.clientY);
+                    if (hits.length > 0) {
+                        const star = hits[0].object;
+                        if (star !== activeStar && window.__showQuoteAt) {
+                            activeStar = star;
+                            window.__showQuoteAt(e.clientX, e.clientY);
+                        }
+                    } else {
+                        activeStar = null;
+                        if (window.__hideQuote) window.__hideQuote();
+                    }
+                });
+            }
 
             // ---- 动画循环 ----
             const clock = new THREE.Clock();
