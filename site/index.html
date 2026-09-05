@@ -758,15 +758,22 @@
             const stars = []; // 每颗星一个 mesh，便于独立 scale / opacity
 
             // 右半边分布范围（往左扩到贴近文字，铺满右边空白）
-            const MIN_X = visW * 0.02, MAX_X = visW * 0.50;
+            const MIN_X = visW * -0.01, MAX_X = visW * 0.50;
             const MIN_Y = -visH * 0.46, MAX_Y = visH * 0.46;
 
+            // 分层抖动网格：把分布区切成格子，每格放一颗星（带随机抖动），保证均匀、无明显空白
+            const COLS = 12;
+            const ROWS = Math.ceil(starCount / COLS);
+            const cellW = (MAX_X - MIN_X) / COLS;
+            const cellH = (MAX_Y - MIN_Y) / ROWS;
             for (let i = 0; i < starCount; i++) {
                 const mat = new THREE.MeshBasicMaterial({ color: starColor, transparent: true, opacity: 0 });
                 const mesh = new THREE.Mesh(starMeshGeo, mat);
+                const col = i % COLS;
+                const row = Math.floor(i / COLS);
                 mesh.position.set(
-                    MIN_X + Math.random() * (MAX_X - MIN_X),
-                    MIN_Y + Math.random() * (MAX_Y - MIN_Y),
+                    MIN_X + (col + 0.5 + (Math.random() - 0.5) * 0.7) * cellW,
+                    MIN_Y + (row + 0.5 + (Math.random() - 0.5) * 0.7) * cellH,
                     (Math.random() - 0.5) * 1.5
                 );
                 mesh.userData = {
@@ -779,8 +786,8 @@
                 stars.push(mesh);
             }
 
-            // ---- 连接线（近邻之间细直线，随星星移动每帧重算） ----
-            const LINK_DIST = visW * 0.06;
+            // ---- 连接线（外轮廓凸包 + 内部近邻，随星星移动每帧重算） ----
+            const LINK_DIST = visW * 0.08;
             const LINK_DIST_SQ = LINK_DIST * LINK_DIST;
             const linkGeo = new THREE.BufferGeometry();
             const linkMat = new THREE.LineBasicMaterial({ color: 0x0d5c46, transparent: true, opacity: 0.15 });
@@ -803,7 +810,37 @@
                     return true;
                 }
 
-                // 1) 自然近邻连线
+                // 0) 外轮廓：计算凸包，最外侧一圈星星连成闭合轮廓
+                function convexHull() {
+                    const order = stars.map((_, k) => k).sort((a, b) =>
+                        stars[a].position.x - stars[b].position.x || stars[a].position.y - stars[b].position.y);
+                    const cross = (o, a, b) => {
+                        const oaX = stars[a].position.x - stars[o].position.x;
+                        const oaY = stars[a].position.y - stars[o].position.y;
+                        const obX = stars[b].position.x - stars[o].position.x;
+                        const obY = stars[b].position.y - stars[o].position.y;
+                        return oaX * obY - oaY * obX;
+                    };
+                    const lower = [];
+                    for (const k of order) {
+                        while (lower.length >= 2 && cross(lower[lower.length - 2], lower[lower.length - 1], k) <= 0) lower.pop();
+                        lower.push(k);
+                    }
+                    const upper = [];
+                    for (let m = order.length - 1; m >= 0; m--) {
+                        const k = order[m];
+                        while (upper.length >= 2 && cross(upper[upper.length - 2], upper[upper.length - 1], k) <= 0) upper.pop();
+                        upper.push(k);
+                    }
+                    lower.pop(); upper.pop();
+                    return lower.concat(upper);
+                }
+                const hull = convexHull();
+                for (let k = 0; k < hull.length; k++) {
+                    addLine(hull[k], hull[(k + 1) % hull.length]);
+                }
+
+                // 1) 自然近邻连线（内部，中心加密）
                 for (let i = 0; i < stars.length; i++) {
                     const pi = stars[i].position;
                     for (let j = i + 1; j < stars.length; j++) {
