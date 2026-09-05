@@ -544,7 +544,7 @@
             function renderDailyQuote(q) {
                 if (!q) return;
                 dqText.textContent = q.text;
-                dqAuthor.textContent = q.author || '群友';
+                dqAuthor.textContent = '群友金句';
                 dqMeta.textContent = (q.section || '漫道') + ' · ' + (q.date || '');
             }
             function shuffleDailyQuote() {
@@ -752,7 +752,7 @@
             const starGroup = new THREE.Group();
             scene.add(starGroup);
             const starMeshes = [];
-            const starColor = new THREE.Color(0xd4a017); // 沉稳金
+            const starColor = new THREE.Color(0xc9d6d2); // 银灰
             for (let i = 0; i < QUOTES.length; i++) {
                 const geo = new THREE.SphereGeometry(0.16, 12, 12);
                 const mat = new THREE.MeshBasicMaterial({ color: starColor });
