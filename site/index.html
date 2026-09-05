@@ -564,7 +564,7 @@
                 if (!QUOTES.length) return;
                 const q = QUOTES[Math.floor(Math.random() * QUOTES.length)];
                 popupText.textContent = q.text;
-                popupMeta.textContent = (q.author || '群友') + ' · ' + (q.section || '') + ' · ' + (q.date || '');
+                popupMeta.textContent = '群友金句 · ' + (q.section || '') + ' · ' + (q.date || '');
 
                 popup.classList.remove('hidden');
                 // 定位到点击处附近，并限制在卡片内
@@ -768,7 +768,7 @@
 
                 // 光晕
                 const glowGeo = new THREE.SphereGeometry(0.38, 12, 12);
-                const glowMat = new THREE.MeshBasicMaterial({ color: 0xd4a017, transparent: true, opacity: 0.16 });
+                const glowMat = new THREE.MeshBasicMaterial({ color: 0xc9d6d2, transparent: true, opacity: 0.16 });
                 const glow = new THREE.Mesh(glowGeo, glowMat);
                 glow.position.copy(mesh.position);
                 starGroup.add(glow);
