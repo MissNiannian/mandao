@@ -757,10 +757,10 @@
             glowCanvas.width = glowCanvas.height = 64;
             const gctx = glowCanvas.getContext('2d');
             const grad = gctx.createRadialGradient(32, 32, 0, 32, 32, 32);
-            grad.addColorStop(0, 'rgba(255,255,255,1)');
-            grad.addColorStop(0.3, 'rgba(232,240,237,0.85)');
-            grad.addColorStop(0.65, 'rgba(201,214,210,0.35)');
-            grad.addColorStop(1, 'rgba(201,214,210,0)');
+            grad.addColorStop(0, 'rgba(13,92,70,1)');
+            grad.addColorStop(0.5, 'rgba(13,92,70,0.9)');
+            grad.addColorStop(0.85, 'rgba(13,92,70,0.3)');
+            grad.addColorStop(1, 'rgba(13,92,70,0)');
             gctx.fillStyle = grad;
             gctx.fillRect(0, 0, 64, 64);
             const glowTexture = new THREE.CanvasTexture(glowCanvas);
@@ -775,16 +775,35 @@
             const starGeo = new THREE.BufferGeometry();
             starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
             const starMat = new THREE.PointsMaterial({
-                color: 0xffffff,
+                color: 0x0d5c46,
                 size: 0.12,
                 map: glowTexture,
                 transparent: true,
-                blending: THREE.AdditiveBlending,
                 depthWrite: false,
                 sizeAttenuation: true
             });
             const starPoints = new THREE.Points(starGeo, starMat);
             starGroup.add(starPoints);
+
+            // ---- 连接线：近邻星星之间画一条很细的直线（形成星座/网络感） ----
+            const linkPositions = [];
+            const LINK_DIST = visW * 0.11;
+            const LINK_DIST_SQ = LINK_DIST * LINK_DIST;
+            for (let i = 0; i < QUOTES.length; i++) {
+                const xi = starPos[i * 3], yi = starPos[i * 3 + 1], zi = starPos[i * 3 + 2];
+                for (let j = i + 1; j < QUOTES.length; j++) {
+                    const dx = starPos[j * 3] - xi, dy = starPos[j * 3 + 1] - yi, dz = starPos[j * 3 + 2] - zi;
+                    if (dx * dx + dy * dy + dz * dz < LINK_DIST_SQ) {
+                        linkPositions.push(xi, yi, zi, starPos[j * 3], starPos[j * 3 + 1], starPos[j * 3 + 2]);
+                    }
+                }
+            }
+            const linkGeo = new THREE.BufferGeometry();
+            linkGeo.setAttribute('position', new THREE.Float32BufferAttribute(linkPositions, 3));
+            const linkMat = new THREE.LineBasicMaterial({ color: 0x0d5c46, transparent: true, opacity: 0.22 });
+            const links = new THREE.LineSegments(linkGeo, linkMat);
+            links.renderOrder = -1; // 在亮点之下，避免压住点
+            starGroup.add(links);
 
             // ---- 交互：桌面端悬停显示，移动端点一下显示 ----
             const raycaster = new THREE.Raycaster();
@@ -839,9 +858,9 @@
                 starGroup.rotation.y += (mouseX * 0.05 - starGroup.rotation.y) * 0.03;
                 starGroup.rotation.x += (mouseY * 0.03 - starGroup.rotation.x) * 0.03;
 
-                // 轻微呼吸：整片亮点尺寸/亮度缓慢起伏，不逐颗跳动
+                // 轻微呼吸：整片亮点尺寸/亮度缓慢起伏（深绿点不能降太低，否则看不见）
                 starMat.size = 0.11 + Math.sin(t * 1.4) * 0.02;
-                starMat.opacity = 0.85 + Math.sin(t * 1.4 + 0.8) * 0.15;
+                starMat.opacity = 0.92 + Math.sin(t * 1.4 + 0.8) * 0.08;
 
                 renderer.render(scene, camera);
             }
