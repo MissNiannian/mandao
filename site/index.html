@@ -747,39 +747,51 @@
             const bgMat = new THREE.PointsMaterial({ color: 0x8fbfa8, size: 0.045, transparent: true, opacity: 0.55 });
             scene.add(new THREE.Points(bgGeo, bgMat));
 
-            // ---- 可点击亮星（集中在右半边，避开左侧文字） ----
+            // ---- 可点击亮星（小亮点，集中在右半边，避开左侧文字） ----
             const QUOTES = window.PUBLIC_QUOTES || [];
             const starGroup = new THREE.Group();
             scene.add(starGroup);
-            const starMeshes = [];
-            const starColor = new THREE.Color(0xc9d6d2); // 银灰
-            for (let i = 0; i < QUOTES.length; i++) {
-                const geo = new THREE.SphereGeometry(0.16, 12, 12);
-                const mat = new THREE.MeshBasicMaterial({ color: starColor });
-                const mesh = new THREE.Mesh(geo, mat);
-                // 右半边：x ∈ [visW*0.08, visW*0.44]
-                mesh.position.set(
-                    visW * (0.08 + Math.random() * 0.36),
-                    visH * (Math.random() - 0.5) * 0.72,
-                    (Math.random() - 0.5) * 1.5 + 1
-                );
-                starGroup.add(mesh);
-                starMeshes.push(mesh);
 
-                // 光晕
-                const glowGeo = new THREE.SphereGeometry(0.38, 12, 12);
-                const glowMat = new THREE.MeshBasicMaterial({ color: 0xc9d6d2, transparent: true, opacity: 0.16 });
-                const glow = new THREE.Mesh(glowGeo, glowMat);
-                glow.position.copy(mesh.position);
-                starGroup.add(glow);
-                mesh.userData.glow = glow;
+            // 圆形发光纹理：柔和的小亮点（中心亮、边缘渐隐）
+            const glowCanvas = document.createElement('canvas');
+            glowCanvas.width = glowCanvas.height = 64;
+            const gctx = glowCanvas.getContext('2d');
+            const grad = gctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+            grad.addColorStop(0, 'rgba(255,255,255,1)');
+            grad.addColorStop(0.3, 'rgba(232,240,237,0.85)');
+            grad.addColorStop(0.65, 'rgba(201,214,210,0.35)');
+            grad.addColorStop(1, 'rgba(201,214,210,0)');
+            gctx.fillStyle = grad;
+            gctx.fillRect(0, 0, 64, 64);
+            const glowTexture = new THREE.CanvasTexture(glowCanvas);
+
+            const starPos = new Float32Array(Math.max(QUOTES.length, 1) * 3);
+            for (let i = 0; i < QUOTES.length; i++) {
+                // 右半边：x ∈ [visW*0.08, visW*0.44]
+                starPos[i * 3] = visW * (0.08 + Math.random() * 0.36);
+                starPos[i * 3 + 1] = visH * (Math.random() - 0.5) * 0.72;
+                starPos[i * 3 + 2] = (Math.random() - 0.5) * 1.5 + 1;
             }
+            const starGeo = new THREE.BufferGeometry();
+            starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+            const starMat = new THREE.PointsMaterial({
+                color: 0xffffff,
+                size: 0.12,
+                map: glowTexture,
+                transparent: true,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false,
+                sizeAttenuation: true
+            });
+            const starPoints = new THREE.Points(starGeo, starMat);
+            starGroup.add(starPoints);
 
             // ---- 交互：桌面端悬停显示，移动端点一下显示 ----
             const raycaster = new THREE.Raycaster();
+            raycaster.params.Points.threshold = 0.35;
             const pointer = new THREE.Vector2();
             let mouseX = 0, mouseY = 0;
-            let activeStar = null; // 当前悬停的星星（用于避免同一颗星反复重新随机）
+            let activeStarIndex = -1; // 当前悬停的星星索引（避免同一颗星反复重新随机）
 
             function pickAt(clientX, clientY) {
                 const rect = canvas.getBoundingClientRect();
@@ -787,7 +799,7 @@
                 pointer.y = -((clientY - rect.top) / rect.height) * 2 + 1;
                 mouseX = pointer.x; mouseY = pointer.y;
                 raycaster.setFromCamera(pointer, camera);
-                return raycaster.intersectObjects(starMeshes, false);
+                return raycaster.intersectObjects([starPoints], false);
             }
 
             const isTouch = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
@@ -806,13 +818,13 @@
                 canvas.addEventListener('pointermove', function (e) {
                     const hits = pickAt(e.clientX, e.clientY);
                     if (hits.length > 0) {
-                        const star = hits[0].object;
-                        if (star !== activeStar && window.__showQuoteAt) {
-                            activeStar = star;
+                        const idx = hits[0].index;
+                        if (idx !== activeStarIndex && window.__showQuoteAt) {
+                            activeStarIndex = idx;
                             window.__showQuoteAt(e.clientX, e.clientY);
                         }
                     } else {
-                        activeStar = null;
+                        activeStarIndex = -1;
                         if (window.__hideQuote) window.__hideQuote();
                     }
                 });
@@ -827,13 +839,9 @@
                 starGroup.rotation.y += (mouseX * 0.05 - starGroup.rotation.y) * 0.03;
                 starGroup.rotation.x += (mouseY * 0.03 - starGroup.rotation.x) * 0.03;
 
-                starMeshes.forEach((m, i) => {
-                    const s = 1 + Math.sin(t * 1.6 + i * 1.7) * 0.25;
-                    m.scale.setScalar(s);
-                    if (m.userData.glow) {
-                        m.userData.glow.scale.setScalar(1 + Math.sin(t * 1.6 + i * 1.7) * 0.3);
-                    }
-                });
+                // 轻微呼吸：整片亮点尺寸/亮度缓慢起伏，不逐颗跳动
+                starMat.size = 0.11 + Math.sin(t * 1.4) * 0.02;
+                starMat.opacity = 0.85 + Math.sin(t * 1.4 + 0.8) * 0.15;
 
                 renderer.render(scene, camera);
             }
